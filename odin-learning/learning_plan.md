@@ -1,7 +1,7 @@
 # The Odin Project Learning Plan
 
 ## Overview
-This is a structured learning plan following The Odin Project curriculum, focused on full stack JavaScript development.
+This is a structured learning plan following The Odin Project curriculum, focused on full stack JavaScript development. There are 8 courses, each having multiple chapters that further have topics within.
 
 ## Progress Markers Legend
 - [ ] Not started
@@ -31,10 +31,10 @@ This is a structured learning plan following The Odin Project curriculum, focuse
      - [✅] [Git Basics](https://www.theodinproject.com/lessons/foundations-git-basics) - Completed on July 4, 2025
 
    - [ ] [**HTML Foundations**](https://www.theodinproject.com/paths/foundations/courses/foundations#html-foundations)
-     - [ ] [Introduction to HTML and CSS](https://www.theodinproject.com/lessons/foundations-introduction-to-html-and-css)
-     - [ ] [Elements and Tags](https://www.theodinproject.com/lessons/foundations-elements-and-tags)
-     - [ ] [HTML Boilerplate](https://www.theodinproject.com/lessons/foundations-html-boilerplate)
-     - [ ] [Working with Text](https://www.theodinproject.com/lessons/foundations-working-with-text)
+     - [✅] [Introduction to HTML and CSS](https://www.theodinproject.com/lessons/foundations-introduction-to-html-and-css) - Completed on July 4, 2025
+     - [✅] [Elements and Tags](https://www.theodinproject.com/lessons/foundations-elements-and-tags) - Completed on July 4, 2025
+     - [✅] [HTML Boilerplate](https://www.theodinproject.com/lessons/foundations-html-boilerplate) - Completed on July 5, 2025
+     - [✅] [Working with Text](https://www.theodinproject.com/lessons/foundations-working-with-text) - Completed on July 5, 2025
      - [ ] [Lists](https://www.theodinproject.com/lessons/foundations-lists)
      - [ ] [Links and Images](https://www.theodinproject.com/lessons/foundations-links-and-images)
      - [ ] [Project: Recipes](https://www.theodinproject.com/lessons/foundations-recipes)
