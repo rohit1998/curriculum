@@ -35,9 +35,10 @@ This is a structured learning plan following The Odin Project curriculum, focuse
      - [✅] [Elements and Tags](https://www.theodinproject.com/lessons/foundations-elements-and-tags) - Completed on July 4, 2025
      - [✅] [HTML Boilerplate](https://www.theodinproject.com/lessons/foundations-html-boilerplate) - Completed on July 5, 2025
      - [✅] [Working with Text](https://www.theodinproject.com/lessons/foundations-working-with-text) - Completed on July 5, 2025
-     - [ ] [Lists](https://www.theodinproject.com/lessons/foundations-lists)
-     - [ ] [Links and Images](https://www.theodinproject.com/lessons/foundations-links-and-images)
-     - [ ] [Project: Recipes](https://www.theodinproject.com/lessons/foundations-recipes)
+     - [✅] [Lists](https://www.theodinproject.com/lessons/foundations-lists) - Completed on July 7, 2025
+     - [✅] [Links and Images](https://www.theodinproject.com/lessons/foundations-links-and-images) - Completed on July 11, 2025
+     - [✅] [Commit Messages](https://www.theodinproject.com/lessons/foundations-commit-messages) - Completed on July 11, 2025
+     - [✅] [Project: Recipes](https://www.theodinproject.com/lessons/foundations-recipes) - Completed on July 11, 2025
 
    - [ ] [**CSS Foundations**](https://www.theodinproject.com/paths/foundations/courses/foundations#css-foundations)
      - [ ] [CSS Foundations](https://www.theodinproject.com/lessons/foundations-css-foundations)
