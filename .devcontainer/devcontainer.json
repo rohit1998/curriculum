@@ -1,0 +1,30 @@
+{
+    "name": "Fullstack Python App",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "dev_service",
+    "workspaceFolder": "/app",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "zsh",
+                "terminal.integrated.fontFamily": "MesloLGS Nerd Font Mono"
+            },
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-azuretools.vscode-docker"
+            ]
+        }
+    },
+    "remoteUser": "root",
+    "forwardPorts": [],
+    "postCreateCommand": "./.devcontainer/post-create.sh",
+    "mounts": [
+        "source=zsh-history,target=/commandhistory,type=volume",
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/root/.ssh,type=bind,consistency=cached",
+        "source=${localEnv:SSH_AUTH_SOCK},target=/ssh-agent,type=bind"
+    ],
+    "remoteEnv": {
+        "SSH_AUTH_SOCK": "/ssh-agent"
+    }
+}

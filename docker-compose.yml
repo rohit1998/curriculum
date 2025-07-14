@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  dev_service:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    ports:
+      - "${DEV_SERVICE_PORT}:${DEV_SERVICE_PORT}"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - .:/app
+    working_dir: /app
+    restart: unless-stopped
+    command: ["sleep", "infinity"]
+    networks:
+      - app_network
+    # depends_on removed: file_system_service no longer used
+  live_server_service:
+    image: node:slim
+    container_name: live_server_service
+    ports:
+      - "${LIVE_SERVER_PORT}:${LIVE_SERVER_PORT}"
+    volumes:
+      - .:/app
+    working_dir: /app/
+    command: >
+      sh -c "npm install -g live-server && live-server --port=${LIVE_SERVER_PORT} --host=0.0.0.0 --no-browser"
+    networks:
+      - app_network
+    tty: true
+    restart: always
+
+
+networks:
+  app_network:
+    driver: bridge
+
+# docker compose up --build
+# docker compose down
+# docker compose down && docker compose up --build

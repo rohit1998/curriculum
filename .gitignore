@@ -3,3 +3,4 @@ test.rb
 *.swp
 .vscode/
 node_modules/
+.env
