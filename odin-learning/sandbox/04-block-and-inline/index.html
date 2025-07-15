@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Block vs Inline Example</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Block vs Inline Elements</h1>
+
+  <h2>Block Elements</h2>
+  <div class="block-example">This is a div (block element).</div>
+  <p class="block-example">This is a paragraph (block element).</p>
+
+  <h2>Inline Elements</h2>
+  <span class="inline-example">This is a span (inline element).</span>
+  <a href="#" class="inline-example">This is a link (inline element).</a>
+  <strong class="inline-example">This is strong (inline element).</strong>
+
+  <h2>Inline-block Example</h2>
+  <span class="inline-block-example">Inline-block 1</span>
+  <span class="inline-block-example">Inline-block 2</span>
+
+  <h2>Mixed Example</h2>
+  <div class="mixed">
+    <!-- Inline span (default) -->
+    <span class="inline-example">Inline inside block</span>
+    <!-- Inline span with more text to show wrapping -->
+    <span class="inline-example">Another inline span with more text to show wrapping behavior.</span>
+    <!-- Inline span with display:block -->
+    <span class="inline-example" style="display: block; background: #ffcccb; border: 1px solid #b71c1c;">This span is now display: block</span>
+    <!-- Inline-block example -->
+    <span class="inline-block-example">Inline-block inside block</span>
+    <!-- Add a regular text node -->
+    Some plain text between spans.
+    <!-- Add another inline element -->
+    <a href="#" class="inline-example">Inline link inside block</a>
+  </div>
+</body>
+</html>

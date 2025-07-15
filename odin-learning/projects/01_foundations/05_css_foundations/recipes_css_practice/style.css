@@ -1,0 +1,39 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: rgb(255, 230, 200);
+}
+
+a {
+    text-decoration: none;
+}
+
+#recipe_home_container {
+    padding: 10px;
+    background-color: rgb(255, 186, 48);
+    text-align: center;
+}
+
+#recipe_home_container a {
+    color: rgb(106, 0, 11);
+    font-size: xxx-large;
+    font-family: 'Segoe UI', Arial, sans-serif;   
+}
+
+#recipe_list {
+    text-align: center;
+}
+
+.recipe_item {
+    margin: 30px;
+    display: inline-block;
+}
+
+.recipe_item a {
+    font-size: xx-large;
+    color: rgb(76, 50, 0);
+    font-family: Trebuchet MS, sans-serif;
+}

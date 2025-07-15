@@ -44,7 +44,7 @@
 02. [✅] [The Cascade](https://www.theodinproject.com/lessons/foundations-the-cascade) - Completed on July 14, 2025
 03. [✅] [Inspecting HTML and CSS](https://www.theodinproject.com/lessons/foundations-inspecting-html-and-css)
 04. [✅] [The Box Model](https://www.theodinproject.com/lessons/foundations-the-box-model)
-05. [ ] [Block and Inline](https://www.theodinproject.com/lessons/foundations-block-and-inline)
+05. [✅] [Block and Inline](https://www.theodinproject.com/lessons/foundations-block-and-inline) - Completed on July 15, 2025
 
 ### 06 [ ] [Flexbox](https://www.theodinproject.com/paths/foundations/courses/foundations#flexbox)
 01. [ ] [Introduction to Flexbox](https://www.theodinproject.com/lessons/foundations-introduction-to-flexbox)

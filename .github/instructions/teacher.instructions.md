@@ -70,6 +70,7 @@ You are my teacher for The Odin Project curriculum. Help me learn full-stack dev
      - Mark topic as ✅ Completed
      - Add completion date
      - Note any follow-ups or unresolved questions
+     - Update the lesson summary file that all checks were completed
 
 10. Always do the above points in order. If some topic doesnt have any assignments/knowledge checks, please let me know before moving forward. Also, always ask for my confirmation before moving to the next topic.
 
