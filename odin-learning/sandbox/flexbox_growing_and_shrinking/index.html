@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Growing and Shrinking Demos</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: sans-serif; margin: 2rem; }
+    h2 { margin-top: 2rem; }
+    .demo-container { margin-bottom: 2rem; }
+    .flex-container { display: flex; gap: 1rem; background: #f0f0f0; padding: 1rem; border-radius: 8px; }
+    .flex-item { background: #4f8cff; color: white; padding: 1rem; border-radius: 4px; text-align: center; min-width: 60px; transition: all 0.3s; }
+    .controls { margin: 1rem 0; }
+    label { margin-right: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>Flexbox Growing and Shrinking: Interactive Demos</h1>
+
+  <div class="demo-container">
+    <h2>Demo 1: flex-grow</h2>
+    <div class="controls">
+      <label>Item 1 grow: <input type="number" id="grow1" value="1" min="0" max="5"></label>
+      <label>Item 2 grow: <input type="number" id="grow2" value="2" min="0" max="5"></label>
+      <label>Item 3 grow: <input type="number" id="grow3" value="1" min="0" max="5"></label>
+      <button onclick="updateGrow()">Update</button>
+    </div>
+    <div class="flex-container" id="grow-demo">
+      <div class="flex-item" id="grow-item-1">1</div>
+      <div class="flex-item" id="grow-item-2">2</div>
+      <div class="flex-item" id="grow-item-3">3</div>
+    </div>
+    <p>Change the <code>flex-grow</code> values and see how the items expand to fill the container.</p>
+  </div>
+
+  <div class="demo-container">
+    <h2>Demo 2: flex-shrink</h2>
+    <div class="controls">
+      <label>Item 1 shrink: <input type="number" id="shrink1" value="1" min="0" max="5"></label>
+      <label>Item 2 shrink: <input type="number" id="shrink2" value="2" min="0" max="5"></label>
+      <label>Item 3 shrink: <input type="number" id="shrink3" value="1" min="0" max="5"></label>
+      <button onclick="updateShrink()">Update</button>
+    </div>
+    <div class="flex-container" id="shrink-demo" style="width: 400px;">
+      <div class="flex-item" id="shrink-item-1" style="flex: 1 1 200px;">1</div>
+      <div class="flex-item" id="shrink-item-2" style="flex: 1 1 200px;">2</div>
+      <div class="flex-item" id="shrink-item-3" style="flex: 1 1 200px;">3</div>
+    </div>
+    <p>Try shrinking the window or changing <code>flex-shrink</code> values to see how items shrink when space is tight.</p>
+  </div>
+
+  <div class="demo-container">
+    <h2>Demo 3: flex-basis</h2>
+    <div class="controls">
+      <label>Item 1 basis: <input type="text" id="basis1" value="100px"></label>
+      <label>Item 2 basis: <input type="text" id="basis2" value="200px"></label>
+      <label>Item 3 basis: <input type="text" id="basis3" value="150px"></label>
+      <button onclick="updateBasis()">Update</button>
+    </div>
+    <div class="flex-container" id="basis-demo">
+      <div class="flex-item" id="basis-item-1" style="flex: 1 1 100px;">1</div>
+      <div class="flex-item" id="basis-item-2" style="flex: 1 1 200px;">2</div>
+      <div class="flex-item" id="basis-item-3" style="flex: 1 1 150px;">3</div>
+    </div>
+    <p>Change the <code>flex-basis</code> values to see how the initial size of each item changes.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

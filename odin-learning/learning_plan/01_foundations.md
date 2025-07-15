@@ -46,9 +46,9 @@
 04. [✅] [The Box Model](https://www.theodinproject.com/lessons/foundations-the-box-model)
 05. [✅] [Block and Inline](https://www.theodinproject.com/lessons/foundations-block-and-inline) - Completed on July 15, 2025
 
-### 06 [ ] [Flexbox](https://www.theodinproject.com/paths/foundations/courses/foundations#flexbox)
-01. [ ] [Introduction to Flexbox](https://www.theodinproject.com/lessons/foundations-introduction-to-flexbox)
-02. [ ] [Growing and Shrinking](https://www.theodinproject.com/lessons/foundations-growing-and-shrinking)
+### 06 [🔄] [Flexbox](https://www.theodinproject.com/paths/foundations/courses/foundations#flexbox)
+01. [✅] [Introduction to Flexbox](https://www.theodinproject.com/lessons/foundations-introduction-to-flexbox) - Completed on July 15, 2025
+02. [✅] [Growing and Shrinking](https://www.theodinproject.com/lessons/foundations-growing-and-shrinking) - Completed on July 15, 2025
 03. [ ] [Axes](https://www.theodinproject.com/lessons/foundations-axes)
 04. [ ] [Alignment](https://www.theodinproject.com/lessons/foundations-alignment)
 05. [ ] [Project: Landing Page](https://www.theodinproject.com/lessons/foundations-landing-page)

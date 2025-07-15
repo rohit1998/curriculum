@@ -1,0 +1,152 @@
+.flex-container-align {
+  display: flex;
+  border: 2px solid #c2185b;
+  background: #fce4ec;
+  margin: 1.5rem auto;
+  max-width: 600px;
+  padding: 12px;
+  min-height: 100px;
+  height: 120px;
+}
+.flex-align-item {
+  background: #c2185b;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 4px;
+  margin: 0 4px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-align-start {
+  align-items: flex-start;
+}
+.flex-align-center {
+  align-items: center;
+}
+.flex-align-end {
+  align-items: flex-end;
+}
+.flex-align-stretch {
+  align-items: stretch;
+}
+.flex-align-baseline {
+  align-items: baseline;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  border: 2px solid #333;
+  padding: 16px;
+  background: #fff;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.item {
+  background: #4f8cff;
+  color: #fff;
+  padding: 16px;
+  margin: 8px 0;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.flex-container {
+  border: 2px dashed #1a7f37;
+  padding: 16px;
+  background: #eaffea;
+  margin: 2rem auto;
+  max-width: 600px;
+  display: flex;
+}
+
+.flex-item {
+  background: #1a7f37;
+  color: #fff;
+  padding: 16px;
+  margin: 0 8px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 1.2rem;
+  flex: 1;
+}
+
+.flex-container-unequal {
+  border: 2px dashed #b36a00;
+  padding: 16px;
+  background: #fff7e6;
+  margin: 2rem auto;
+  max-width: 600px;
+  display: flex;
+}
+
+.flex-item-unequal {
+  color: #fff;
+  padding: 16px;
+  margin: 0 8px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.flex1 {
+  background: #b36a00;
+  flex: 1;
+}
+.flex2 {
+  background: #ff9800;
+  flex: 2;
+}
+.flex3 {
+  background: #ffd54f;
+  color: #333;
+  flex: 3;
+}
+
+/* Justify-content demo styles */
+.flex-container-justify {
+  display: flex;
+  border: 2px solid #1976d2;
+  background: #e3f2fd;
+  margin: 1.5rem auto;
+  max-width: 600px;
+  padding: 12px;
+  min-height: 60px;
+}
+.flex-justify-item {
+  background: #1976d2;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 4px;
+  margin: 0 4px;
+  font-size: 1rem;
+}
+.flex-justify-start {
+  justify-content: flex-start;
+}
+.flex-justify-center {
+  justify-content: center;
+}
+.flex-justify-end {
+  justify-content: flex-end;
+}
+.flex-justify-between {
+  justify-content: space-between;
+}
+.flex-justify-around {
+  justify-content: space-around;
+}
+.flex-justify-evenly {
+  justify-content: space-evenly;
+}

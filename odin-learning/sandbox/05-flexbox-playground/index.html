@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Playground</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Flexbox Playground</h1>
+  <h2>Before: Default Block Layout</h2>
+  <div class="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+  </div>
+
+  <h2>After: Flexbox Layout</h2>
+  <div class="flex-container">
+    <div class="flex-item">Item 1</div>
+    <div class="flex-item">Item 2</div>
+    <div class="flex-item">Item 3</div>
+  </div>
+
+  <h2>Flexbox: Unequal Flex Values</h2>
+  <div class="flex-container-unequal">
+    <div class="flex-item-unequal flex1">Item 1 (flex: 1)</div>
+    <div class="flex-item-unequal flex2">Item 2 (flex: 2)</div>
+    <div class="flex-item-unequal flex3">Item 3 (flex: 3)</div>
+  </div>
+
+  <h2>Flexbox: justify-content Demo</h2>
+  <div class="flex-container-justify flex-justify-start">
+    <div class="flex-justify-item">Start</div>
+    <div class="flex-justify-item">Start</div>
+    <div class="flex-justify-item">Start</div>
+  </div>
+  <div class="flex-container-justify flex-justify-center">
+    <div class="flex-justify-item">Center</div>
+    <div class="flex-justify-item">Center</div>
+    <div class="flex-justify-item">Center</div>
+  </div>
+  <div class="flex-container-justify flex-justify-end">
+    <div class="flex-justify-item">End</div>
+    <div class="flex-justify-item">End</div>
+    <div class="flex-justify-item">End</div>
+  </div>
+  <div class="flex-container-justify flex-justify-between">
+    <div class="flex-justify-item">Between</div>
+    <div class="flex-justify-item">Between</div>
+    <div class="flex-justify-item">Between</div>
+  </div>
+  <div class="flex-container-justify flex-justify-around">
+    <div class="flex-justify-item">Around</div>
+    <div class="flex-justify-item">Around</div>
+    <div class="flex-justify-item">Around</div>
+  </div>
+  <div class="flex-container-justify flex-justify-evenly">
+    <div class="flex-justify-item">Evenly</div>
+    <div class="flex-justify-item">Evenly</div>
+    <div class="flex-justify-item">Evenly</div>
+  </div>
+
+  <h2>Flexbox: align-items Demo</h2>
+  <div class="flex-container-align flex-align-start">
+    <div class="flex-align-item" style="height: 40px;">Start</div>
+    <div class="flex-align-item" style="height: 60px;">Start</div>
+    <div class="flex-align-item" style="height: 80px;">Start</div>
+  </div>
+  <div class="flex-container-align flex-align-center">
+    <div class="flex-align-item" style="height: 40px;">Center</div>
+    <div class="flex-align-item" style="height: 60px;">Center</div>
+    <div class="flex-align-item" style="height: 80px;">Center</div>
+  </div>
+  <div class="flex-container-align flex-align-end">
+    <div class="flex-align-item" style="height: 40px;">End</div>
+    <div class="flex-align-item" style="height: 60px;">End</div>
+    <div class="flex-align-item" style="height: 80px;">End</div>
+  </div>
+  <div class="flex-container-align flex-align-stretch">
+    <div class="flex-align-item" style="height: 40px;">Stretch</div>
+    <div class="flex-align-item" style="height: 60px;">Stretch</div>
+    <div class="flex-align-item" style="height: 80px;">Stretch</div>
+  </div>
+  <div class="flex-container-align flex-align-baseline">
+    <div class="flex-align-item" style="height: 40px; font-size: 1rem;">Baseline</div>
+    <div class="flex-align-item" style="height: 60px; font-size: 1.5rem;">Baseline</div>
+    <div class="flex-align-item" style="height: 80px; font-size: 2rem;">Baseline</div>
+  </div>
+</body>
+</html>
