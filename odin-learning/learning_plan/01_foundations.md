@@ -39,11 +39,11 @@
 - [✅] [Commit Messages](https://www.theodinproject.com/lessons/foundations-commit-messages) - Completed on July 11, 2025
 - [✅] [Project: Recipes](https://www.theodinproject.com/lessons/foundations-recipes) - Completed on July 11, 2025
 
-### [ ] [CSS Foundations](https://www.theodinproject.com/paths/foundations/courses/foundations#css-foundations)
-- [ ] [Intro to CSS](https://www.theodinproject.com/lessons/foundations-intro-to-css)
-- [ ] [The Cascade](https://www.theodinproject.com/lessons/foundations-the-cascade)
-- [ ] [Inspecting HTML and CSS](https://www.theodinproject.com/lessons/foundations-inspecting-html-and-css)
-- [ ] [The Box Model](https://www.theodinproject.com/lessons/foundations-the-box-model)
+### [🔄] [CSS Foundations](https://www.theodinproject.com/paths/foundations/courses/foundations#css-foundations)
+- [✅] [Intro to CSS](https://www.theodinproject.com/lessons/foundations-intro-to-css) - Completed on July 14, 2025
+- [✅] [The Cascade](https://www.theodinproject.com/lessons/foundations-the-cascade) - Completed on July 14, 2025
+- [✅] [Inspecting HTML and CSS](https://www.theodinproject.com/lessons/foundations-inspecting-html-and-css)
+- [✅] [The Box Model](https://www.theodinproject.com/lessons/foundations-the-box-model)
 - [ ] [Block and Inline](https://www.theodinproject.com/lessons/foundations-block-and-inline)
 
 ### [ ] [Flexbox](https://www.theodinproject.com/paths/foundations/courses/foundations#flexbox)

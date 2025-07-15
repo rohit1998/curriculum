@@ -1,0 +1,89 @@
+<!--
+This file demonstrates margin: auto, margin collapsing, and negative margins in CSS.
+Open in your browser and use DevTools to inspect the layout.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Margin: auto and Collapsing Examples</title>
+  <style>
+    .centered {
+      width: 300px;
+      background: #e0f7fa;
+      margin: 20px auto;
+      padding: 20px;
+      border: 2px solid #00796b;
+      text-align: center;
+    }
+    .collapse-demo h2 {
+      margin-bottom: 40px;
+      background: #ffe082;
+    }
+    .collapse-demo p {
+      margin-top: 20px;
+      background: #fff9c4;
+    }
+    .negative-demo {
+      margin-top: 40px;
+      background: #f8bbd0;
+      padding: 20px;
+    }
+    .negative-demo p {
+      margin-bottom: -20px;
+      background: #fce4ec;
+    }
+    .negative-demo .next {
+      background: #f3e5f5;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Margin: auto and Collapsing Examples</h1>
+
+  <div style="height: 400px; background: #ede7f6; position: relative; margin-bottom: 40px; display: flex; align-items: center; justify-content: center;">
+    <div style="width: 150px; height: 100px; background: #d1c4e9; margin: auto; display: flex; align-items: center; justify-content: center; border: 2px solid #512da8;">
+      <div style="text-align: center; width: 100%;">
+        <strong>margin: auto;</strong><br>
+        This box is centered <b>both horizontally and vertically</b> in its parent.<br>
+        (Parent has fixed height)
+      </div>
+    </div>
+  </div>
+
+  <div class="centered">
+    <strong>margin: 0 auto;</strong><br>
+    This box is horizontally centered using <code>margin: 0 auto;</code> and a fixed width.
+  </div>
+
+  <div class="centered" style="margin: 40px 100px; background: #ffe0b2;">
+    <strong>margin: 40px 100px;</strong><br>
+    Top and bottom margins are 40px, left and right are 100px.<br>
+    The box is not centered, but offset from both sides.
+  </div>
+
+  <div class="centered" style="margin: 0 0 0 auto; background: #c8e6c9; width: 200px;">
+    <strong>margin: 0 0 0 auto;</strong><br>
+    Only <b>left</b> margin is auto, so the box sticks to the <b>right</b> edge.<br>
+    (width: 200px)
+  </div>
+
+  <div class="centered" style="margin: 0 auto 0 0; background: #b3e5fc; width: 200px;">
+    <strong>margin: 0 auto 0 0;</strong><br>
+    Only <b>right</b> margin is auto, so the box sticks to the <b>left</b> edge.<br>
+    (width: 200px)
+  </div>
+
+  <div class="collapse-demo">
+    <h2>Margin Collapsing Example</h2>
+    <p>Paragraph 1 (h2 has <code>margin-bottom: 40px</code>, p has <code>margin-top: 20px</code>)</p>
+    <p>Paragraph 2</p>
+    <!-- The space between h2 and the first p will be 40px, not 60px -->
+  </div>
+
+  <div class="negative-demo">
+    <p>Paragraph 1 (has <code>margin-bottom: -20px</code>)</p>
+    <p class="next">Paragraph 2 (gets pulled up by negative margin)</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!--
+This file demonstrates CSS pseudo-elements ::before and ::after.
+Open in your browser and use DevTools to inspect the layout.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Pseudo-elements ::before and ::after Example</title>
+  <style>
+    .pseudo-demo {
+      margin: 40px auto;
+      width: 400px;
+      padding: 20px;
+      border: 2px solid #607d8b;
+      background: #e3f2fd;
+      font-size: 1.2em;
+      position: relative;
+    }
+    .pseudo-demo::before {
+      content: "★ ";
+      color: #ffb300;
+      font-size: 1.5em;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+    }
+    .pseudo-demo::after {
+      content: " \2014 after pseudo-element";
+      color: #0288d1;
+      font-size: 0.9em;
+      display: block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS ::before and ::after Example</h1>
+  <div class="pseudo-demo">
+    This is the real content of the element.<br>
+    <em>Notice the star before and the blue text after? They are added with CSS, not HTML!</em>
+  </div>
+</body>
+</html>
