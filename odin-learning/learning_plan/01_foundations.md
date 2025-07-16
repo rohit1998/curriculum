@@ -51,7 +51,7 @@
 02. [✅] [Growing and Shrinking](https://www.theodinproject.com/lessons/foundations-growing-and-shrinking) - Completed on July 15, 2025
 03. [✅] [Axes](https://www.theodinproject.com/lessons/foundations-axes) - Completed on July 15, 2025
 04. [✅] [Alignment](https://www.theodinproject.com/lessons/foundations-alignment) - Completed on July 15, 2025
-05. [ ] [Project: Landing Page](https://www.theodinproject.com/lessons/foundations-landing-page)
+05. [✅] [Project: Landing Page](https://www.theodinproject.com/lessons/foundations-landing-page) - Completed on July 16, 2025
 
 ### 07 [ ] [JavaScript Basics](https://www.theodinproject.com/paths/foundations/courses/foundations#javascript-basics)
 01. [ ] [Variables and Operators](https://www.theodinproject.com/lessons/foundations-variables-and-operators)
