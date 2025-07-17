@@ -19,6 +19,13 @@ FROM prod as dev
 
 # Install zsh, curl, git, and vim
 RUN apt install -y zsh git curl fonts-powerline
+ENV NVM_DIR /root/.nvm
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash \
+    && . "$NVM_DIR/nvm.sh" \
+    && nvm install --lts \
+    && nvm use --lts \
+    && node -v \
+    && npm -v
 
 # Install Oh My Zsh
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended

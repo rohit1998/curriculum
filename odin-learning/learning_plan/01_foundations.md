@@ -39,24 +39,24 @@
 07. [✅] [Commit Messages](https://www.theodinproject.com/lessons/foundations-commit-messages) - Completed on July 11, 2025
 08. [✅] [Project: Recipes](https://www.theodinproject.com/lessons/foundations-recipes) - Completed on July 11, 2025
 
-### 05 [🔄] [CSS Foundations](https://www.theodinproject.com/paths/foundations/courses/foundations#css-foundations)
+### 05 [✅] [CSS Foundations](https://www.theodinproject.com/paths/foundations/courses/foundations#css-foundations)
 01. [✅] [Intro to CSS](https://www.theodinproject.com/lessons/foundations-intro-to-css) - Completed on July 14, 2025
 02. [✅] [The Cascade](https://www.theodinproject.com/lessons/foundations-the-cascade) - Completed on July 14, 2025
 03. [✅] [Inspecting HTML and CSS](https://www.theodinproject.com/lessons/foundations-inspecting-html-and-css)
 04. [✅] [The Box Model](https://www.theodinproject.com/lessons/foundations-the-box-model)
 05. [✅] [Block and Inline](https://www.theodinproject.com/lessons/foundations-block-and-inline) - Completed on July 15, 2025
 
-### 06 [🔄] [Flexbox](https://www.theodinproject.com/paths/foundations/courses/foundations#flexbox)
+### 06 [✅] [Flexbox](https://www.theodinproject.com/paths/foundations/courses/foundations#flexbox)
 01. [✅] [Introduction to Flexbox](https://www.theodinproject.com/lessons/foundations-introduction-to-flexbox) - Completed on July 15, 2025
 02. [✅] [Growing and Shrinking](https://www.theodinproject.com/lessons/foundations-growing-and-shrinking) - Completed on July 15, 2025
 03. [✅] [Axes](https://www.theodinproject.com/lessons/foundations-axes) - Completed on July 15, 2025
 04. [✅] [Alignment](https://www.theodinproject.com/lessons/foundations-alignment) - Completed on July 15, 2025
 05. [✅] [Project: Landing Page](https://www.theodinproject.com/lessons/foundations-landing-page) - Completed on July 16, 2025
 
-### 07 [ ] [JavaScript Basics](https://www.theodinproject.com/paths/foundations/courses/foundations#javascript-basics)
-01. [ ] [Variables and Operators](https://www.theodinproject.com/lessons/foundations-variables-and-operators)
-02. [ ] [Installing Node.js](https://www.theodinproject.com/lessons/foundations-installing-node-js)
-03. [ ] [Data Types and Conditionals](https://www.theodinproject.com/lessons/foundations-data-types-and-conditionals)
+### 07 [🔄] [JavaScript Basics](https://www.theodinproject.com/paths/foundations/courses/foundations#javascript-basics)
+01. [✅] [Variables and Operators](https://www.theodinproject.com/lessons/foundations-variables-and-operators) - Completed on July 16, 2025
+02. [✅] [Installing Node.js](https://www.theodinproject.com/lessons/foundations-installing-node-js) - Completed on July 16, 2025
+03. [✅] [Data Types and Conditionals](https://www.theodinproject.com/lessons/foundations-data-types-and-conditionals) - Completed on July 16, 2025
 04. [ ] [JavaScript Developer Tools](https://www.theodinproject.com/lessons/foundations-javascript-developer-tools)
 05. [ ] [Function Basics](https://www.theodinproject.com/lessons/foundations-function-basics)
 06. [ ] [Problem Solving](https://www.theodinproject.com/lessons/foundations-problem-solving)
