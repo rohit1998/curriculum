@@ -57,11 +57,11 @@
 01. [✅] [Variables and Operators](https://www.theodinproject.com/lessons/foundations-variables-and-operators) - Completed on July 16, 2025
 02. [✅] [Installing Node.js](https://www.theodinproject.com/lessons/foundations-installing-node-js) - Completed on July 16, 2025
 03. [✅] [Data Types and Conditionals](https://www.theodinproject.com/lessons/foundations-data-types-and-conditionals) - Completed on July 16, 2025
-04. [ ] [JavaScript Developer Tools](https://www.theodinproject.com/lessons/foundations-javascript-developer-tools)
-05. [ ] [Function Basics](https://www.theodinproject.com/lessons/foundations-function-basics)
-06. [ ] [Problem Solving](https://www.theodinproject.com/lessons/foundations-problem-solving)
-07. [ ] [Understanding Errors](https://www.theodinproject.com/lessons/foundations-understanding-errors)
-08. [ ] [Project: Rock Paper Scissors](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors)
+04. [✅] [JavaScript Developer Tools](https://www.theodinproject.com/lessons/foundations-javascript-developer-tools) - Completed on July 17, 2025 (All knowledge checks completed)
+05. [✅] [Function Basics](https://www.theodinproject.com/lessons/foundations-function-basics) - Completed on July 17, 2025
+06. [✅] [Problem Solving](https://www.theodinproject.com/lessons/foundations-problem-solving) - Completed on July 17, 2025 (All knowledge checks completed)
+07. [✅] [Understanding Errors](https://www.theodinproject.com/lessons/foundations-understanding-errors) - Completed on July 17, 2025 (All knowledge checks completed)
+08. [✅] [Project: Rock Paper Scissors](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors) - Completed on October 17, 2023
 09. [ ] [Clean Code](https://www.theodinproject.com/lessons/foundations-clean-code)
 10. [ ] [Loops and Arrays](https://www.theodinproject.com/lessons/foundations-loops-and-arrays)
 11. [ ] [DOM Manipulation and Events](https://www.theodinproject.com/lessons/foundations-dom-manipulation-and-events)
