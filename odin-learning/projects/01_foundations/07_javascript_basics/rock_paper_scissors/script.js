@@ -12,10 +12,10 @@ function getComputerChoice(){
     }
 }
 
-function getHumanChoice(){
-    const userInput = prompt("Enter your choice: rock, paper, scissors");
-    return userInput.toLowerCase();
-}
+// function getHumanChoice(){
+//     const userInput = prompt("Enter your choice: rock, paper, scissors");
+//     return userInput.toLowerCase();
+// }
 
 let humanScore = 0;
 let computerScore = 0;
@@ -38,34 +38,89 @@ function playRound(humanChoice, computerChoice){
     console.log(`User Score: ${humanScore} Computer score: ${computerScore}`);
 }
 
-function playGame(){
-    let humanChoice = getHumanChoice();
-    let computerChoice = getComputerChoice();
-    playRound(humanChoice, computerChoice);
 
-    humanChoice = getHumanChoice();
-    computerChoice = getComputerChoice();
-    playRound(humanChoice, computerChoice);
+const humanScoreElement = document.querySelector(".human")
+const computerScoreElement = document.querySelector(".computer")
+const actionsElement = document.querySelector(".actions")
+const historyElement = document.querySelector(".history")
 
-    humanChoice = getHumanChoice();
-    computerChoice = getComputerChoice();
-    playRound(humanChoice, computerChoice);
+function resetScore(event){
+    humanScore=0;
+    computerScore=0;
+    historyElement.replaceChildren();
+    humanScoreElement.textContent = 0;
+    computerScoreElement.textContent = 0;
 
-    humanChoice = getHumanChoice();
-    computerChoice = getComputerChoice();
-    playRound(humanChoice, computerChoice);
-
-    humanChoice = getHumanChoice();
-    computerChoice = getComputerChoice();
-    playRound(humanChoice, computerChoice);
-
-    if (humanScore > computerScore){
-        console.log("You Won the overall game!!");
-    }
-    else if (computerScore > humanScore){
-        console.log("You Lost the overall game!!");
-    }
-    else{
-        console.log("Overall game ended in a tie!!");
-    }
+    const resetButton = document.querySelector(".reset");
+    actionsElement.removeChild(resetButton);
 }
+
+function actionListner(event){
+
+    if (humanScore===5 || computerScore===5 || !event.target.classList.contains("action")){
+        return;
+    }
+
+    const computerChoice = getComputerChoice();
+    const humanChoice = event.target.textContent.toLowerCase();
+    playRound(humanChoice, computerChoice);
+
+    humanScoreElement.textContent = humanScore;
+    computerScoreElement.textContent = computerScore;
+
+    const roundInfoElement = document.createElement("p");
+    roundInfoElement.textContent = `Human: ${humanChoice} Computer: ${computerChoice}`;
+    historyElement.appendChild(roundInfoElement);
+
+    if (humanScore===5 || computerScore===5){
+        const resetButton = document.createElement("button");
+        resetButton.className = "reset";
+        resetButton.textContent = "reset";
+        resetButton.addEventListener("click", resetScore);
+        actionsElement.appendChild(resetButton);
+    }
+    if (humanScore===5){
+        const finalScoreElement = document.createElement("p");
+        finalScoreElement.textContent = "You Win!!";
+        historyElement.appendChild(finalScoreElement);
+    } else if(computerScore===5){
+        const finalScoreElement = document.createElement("p");
+        finalScoreElement.textContent = "Computer Wins!!";
+        historyElement.appendChild(finalScoreElement);
+    }
+
+}
+
+actionsElement.addEventListener("click", actionListner);
+
+// function playGame(){
+//     let humanChoice = getHumanChoice();
+//     let computerChoice = getComputerChoice();
+//     playRound(humanChoice, computerChoice);
+
+//     humanChoice = getHumanChoice();
+//     computerChoice = getComputerChoice();
+//     playRound(humanChoice, computerChoice);
+
+//     humanChoice = getHumanChoice();
+//     computerChoice = getComputerChoice();
+//     playRound(humanChoice, computerChoice);
+
+//     humanChoice = getHumanChoice();
+//     computerChoice = getComputerChoice();
+//     playRound(humanChoice, computerChoice);
+
+//     humanChoice = getHumanChoice();
+//     computerChoice = getComputerChoice();
+//     playRound(humanChoice, computerChoice);
+
+//     if (humanScore > computerScore){
+//         console.log("You Won the overall game!!");
+//     }
+//     else if (computerScore > humanScore){
+//         console.log("You Lost the overall game!!");
+//     }
+//     else{
+//         console.log("Overall game ended in a tie!!");
+//     }
+// }

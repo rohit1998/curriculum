@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NodeList vs Array</title>
+  <style>
+    .item { margin: 4px 0; padding: 4px; border: 1px solid #bdbdbd; }
+    .highlight { background: #fff9c4; }
+    .log { font-family: monospace; font-size: 0.95em; color: #333; }
+  </style>
+</head>
+<body>
+  <h1>NodeList vs Array</h1>
+  <div id="list">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+  </div>
+  <button id="highlightAll">Highlight All (forEach)</button>
+  <button id="tryMap">Try map() (NodeList)</button>
+  <button id="convertArray">Convert to Array &amp; map()</button>
+  <div id="log" class="log"></div>
+  <script>
+    const items = document.querySelectorAll('.item'); // NodeList
+    const log = document.getElementById('log');
+
+    document.getElementById('highlightAll').onclick = () => {
+      items.forEach(item => item.classList.toggle('highlight'));
+      log.textContent = 'Used forEach on NodeList.';
+    };
+
+    document.getElementById('tryMap').onclick = () => {
+      try {
+        items.map(item => item.textContent);
+      } catch (e) {
+        log.textContent = 'NodeList does NOT have map().';
+      }
+    };
+
+    document.getElementById('convertArray').onclick = () => {
+      const arr = Array.from(items);
+      const texts = arr.map(item => item.textContent);
+      log.textContent = 'Converted to Array. map() result: ' + JSON.stringify(texts);
+    };
+  </script>
+  <p><strong>NodeLists returned by <code>querySelectorAll</code> are not true arrays. Use <code>Array.from()</code> or spread syntax to convert if you need array methods.</strong></p>
+</body>
+</html>

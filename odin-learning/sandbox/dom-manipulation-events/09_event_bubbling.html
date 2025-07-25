@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Bubbling Demo</title>
+  <style>
+    .outer { background: #e3f2fd; padding: 20px; }
+    .middle { background: #bbdefb; padding: 20px; }
+    .inner { background: #90caf9; padding: 20px; }
+    .log { font-family: monospace; font-size: 0.95em; color: #333; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Event Bubbling Demo</h1>
+  <div class="outer">Outer
+    <div class="middle">Middle
+      <div class="inner">Inner (click me!)</div>
+    </div>
+  </div>
+  <div id="log" class="log"></div>
+  <script>
+    const log = document.getElementById('log');
+    document.querySelector('.outer').addEventListener('click', function() {
+      log.textContent += 'Outer clicked\n';
+    });
+    document.querySelector('.middle').addEventListener('click', function() {
+      log.textContent += 'Middle clicked\n';
+    });
+    document.querySelector('.inner').addEventListener('click', function() {
+      log.textContent += 'Inner clicked\n';
+    });
+  </script>
+  <p><strong>Click the innermost box. Notice how all three listeners fire: this is <em>event bubbling</em> in action!</strong></p>
+</body>
+</html>

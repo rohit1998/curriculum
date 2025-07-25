@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>textContent vs innerHTML</title>
+  <style>
+    .demo { margin: 10px 0; padding: 6px; border: 1px solid #aaa; }
+    .danger { color: red; }
+  </style>
+</head>
+<body>
+  <h1>textContent vs innerHTML</h1>
+  <div id="target" class="demo">Hello!</div>
+  <button id="setText">Set textContent</button>
+  <button id="setHTML">Set innerHTML</button>
+  <button id="reset">Reset</button>
+  <script>
+    const target = document.getElementById('target');
+    document.getElementById('setText').onclick = () => {
+      target.textContent = '<span class="danger">This is text, not HTML!</span>';
+    };
+    document.getElementById('setHTML').onclick = () => {
+      target.innerHTML = '<span class="danger">This is real HTML!</span>';
+    };
+    document.getElementById('reset').onclick = () => {
+      target.textContent = 'Hello!';
+    };
+  </script>
+  <p><strong>Note:</strong> <code>textContent</code> treats everything as plain text, while <code>innerHTML</code> parses and renders HTML. Prefer <code>textContent</code> for user input to avoid security risks.</p>
+</body>
+</html>

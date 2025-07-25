@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alter Elements</title>
+  <style>
+    .styled { color: blue; background: #ffe0b2; border: 1px solid #ff9800; padding: 6px; margin: 8px 0; }
+    .big { font-size: 1.5em; }
+  </style>
+</head>
+<body>
+  <h1>Alter Elements</h1>
+  <div id="target">Change me!</div>
+  <button id="changeText">Change Text</button>
+  <button id="toggleClass">Toggle Style</button>
+  <button id="toggleBig">Toggle Big</button>
+  <button id="changeAttr">Change Attribute</button>
+  <script>
+    const target = document.getElementById('target');
+    document.getElementById('changeText').onclick = () => {
+      target.textContent = 'Text changed!';
+    };
+    document.getElementById('toggleClass').onclick = () => {
+      target.classList.toggle('styled');
+    };
+    document.getElementById('toggleBig').onclick = () => {
+      target.classList.toggle('big');
+    };
+    document.getElementById('changeAttr').onclick = () => {
+      if (!target.hasAttribute('data-demo')) {
+        target.setAttribute('data-demo', 'true');
+        alert('Attribute set!');
+      } else {
+        target.removeAttribute('data-demo');
+        alert('Attribute removed!');
+      }
+    };
+  </script>
+</body>
+</html>

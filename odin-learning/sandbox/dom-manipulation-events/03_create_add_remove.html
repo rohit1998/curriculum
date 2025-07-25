@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create, Add, Remove Elements</title>
+  <style>
+    .dynamic { margin: 8px 0; padding: 4px; background: #e0f7fa; border: 1px solid #0097a7; }
+    .remove-btn { margin-left: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Create, Add, Remove Elements</h1>
+  <button id="addDiv">Add New Div</button>
+  <div id="container"></div>
+  <script>
+    const container = document.getElementById('container');
+    const addDivBtn = document.getElementById('addDiv');
+
+    addDivBtn.addEventListener('click', () => {
+      const newDiv = document.createElement('div');
+      newDiv.className = 'dynamic';
+      newDiv.textContent = 'I am a new div!';
+      const removeBtn = document.createElement('button');
+      removeBtn.textContent = 'Remove';
+      removeBtn.className = 'remove-btn';
+      removeBtn.onclick = () => newDiv.remove();
+      newDiv.appendChild(removeBtn);
+      container.appendChild(newDiv);
+    });
+  </script>
+</body>
+</html>

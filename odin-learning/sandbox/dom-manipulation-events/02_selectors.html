@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Selectors Example</title>
+<style>
+  .highlight { background: yellow; }
+</style>
+</head>
+<body>
+  <h1>DOM Selectors Example</h1>
+  <div id="container">
+    <div class="display">Display Area</div>
+    <div class="controls">Controls Area</div>
+  </div>
+  <button id="highlightDisplay">Highlight Display</button>
+  <button id="highlightControls">Highlight Controls</button>
+  <script>
+    // Selectors demo: Try different ways to select elements
+    const container = document.querySelector('#container');
+    const display = document.querySelector('.display');
+    const controls = document.querySelector('.controls');
+
+    document.getElementById('highlightDisplay').onclick = () => {
+      display.classList.toggle('highlight');
+    };
+    document.getElementById('highlightControls').onclick = () => {
+      controls.classList.toggle('highlight');
+    };
+
+    // Try selecting using relationships
+    // const firstChild = container.firstElementChild;
+    // const lastChild = container.lastElementChild;
+    // console.log(firstChild, lastChild);
+  </script>
+</body>
+</html>

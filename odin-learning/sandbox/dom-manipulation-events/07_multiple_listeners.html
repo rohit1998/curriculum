@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiple Event Listeners</title>
+  <style>
+    .log { font-family: monospace; font-size: 0.95em; color: #333; }
+    .clicked { background: #ffe082; }
+  </style>
+</head>
+<body>
+  <h1>Multiple Event Listeners</h1>
+  <button id="multiBtn">Click Me</button>
+  <div id="log" class="log"></div>
+  <script>
+    const btn = document.getElementById('multiBtn');
+    const log = document.getElementById('log');
+
+    btn.addEventListener('click', function() {
+      log.textContent += 'First listener!\n';
+      btn.classList.toggle('clicked');
+    });
+
+    btn.addEventListener('click', function() {
+      log.textContent += 'Second listener!\n';
+    });
+
+    btn.addEventListener('click', function() {
+      log.textContent += 'Third listener!\n';
+    });
+  </script>
+  <p><strong>Click the button multiple times and see how all listeners run in order. This is only possible with <code>addEventListener</code>.</strong></p>
+</body>
+</html>

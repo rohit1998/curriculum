@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Events</title>
+  <style>
+    .clicked { background: #c8e6c9; }
+    .log { font-family: monospace; font-size: 0.95em; color: #333; }
+  </style>
+</head>
+<body>
+  <h1>DOM Events</h1>
+  <button id="btn1">Click Me (inline)</button>
+  <button id="btn2">Click Me (onclick property)</button>
+  <button id="btn3">Click Me (addEventListener)</button>
+  <div id="log" class="log"></div>
+  <script>
+    // Method 1: Inline (not recommended, but shown for learning)
+    document.getElementById('btn1').setAttribute('onclick', "document.getElementById('log').textContent = 'Inline event: Hello!';");
+
+    // Method 2: Property
+    document.getElementById('btn2').onclick = function() {
+      document.getElementById('log').textContent = 'Property event: Hello!';
+      this.classList.toggle('clicked');
+    };
+
+    // Method 3: addEventListener
+    document.getElementById('btn3').addEventListener('click', function(e) {
+      document.getElementById('log').textContent = 'addEventListener: Hello!';
+      e.target.classList.toggle('clicked');
+    });
+  </script>
+  <p><strong>Try all three buttons and watch the log. <code>addEventListener</code> is the preferred method for flexibility and separation of concerns.</strong></p>
+</body>
+</html>

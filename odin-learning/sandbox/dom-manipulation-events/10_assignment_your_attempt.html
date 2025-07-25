@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation Assignment - Your Attempt</title>
+  <style>
+    #red {
+        color: red;
+    }
+
+    #blue {
+        color: blue;
+    }
+
+    #newDiv{
+        background-color: pink;
+        border: 2px solid black;
+    }
+  </style>
+</head>
+<body>
+  <h1>DOM Manipulation Assignment (Your Attempt)</h1>
+  <div id="container"></div>
+  <div id="log"></div>
+  <script>
+    const containerElement = document.getElementById("container");
+    const redP = document.createElement('p');
+    redP.id = "red";
+    redP.textContent = "Hey I'm red!";
+    containerElement.appendChild(redP);
+
+    const blueH3 = document.createElement("h3");
+    blueH3.id = "blue";
+    blueH3.textContent = "I'm a blue h3!"
+    containerElement.appendChild(blueH3);
+
+    const newDiv = document.createElement("div");
+    const newH1 = document.createElement("h1");
+    const newP = document.createElement("p");
+
+    newDiv.id = 'newDiv';
+    newH1.textContent = "I'm in a div";
+    newP.textContent = "ME TOO!";
+
+    newDiv.appendChild(newH1);
+    newDiv.appendChild(newP);
+    containerElement.appendChild(newDiv);
+
+    const logDiv = document.getElementById("log");
+    logDiv.textContent = containerElement;
+
+    // Write your DOM manipulation code here!
+    
+  </script>
+</body>
+</html>
