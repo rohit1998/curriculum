@@ -62,8 +62,8 @@
 06. [✅] [Problem Solving](https://www.theodinproject.com/lessons/foundations-problem-solving) - Completed on July 17, 2025 (All knowledge checks completed)
 07. [✅] [Understanding Errors](https://www.theodinproject.com/lessons/foundations-understanding-errors) - Completed on July 17, 2025 (All knowledge checks completed)
 08. [✅] [Project: Rock Paper Scissors](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors) - Completed on October 17, 2023
-09. [ ] [Clean Code](https://www.theodinproject.com/lessons/foundations-clean-code)
-10. [ ] [Loops and Arrays](https://www.theodinproject.com/lessons/foundations-loops-and-arrays)
+09. [✅] [Clean Code](https://www.theodinproject.com/lessons/foundations-clean-code) - Completed on July 23, 2025 (All knowledge checks completed)
+10. [✅] [Loops and Arrays](https://www.theodinproject.com/lessons/foundations-loops-and-arrays) - Completed on July 25, 2025 (All knowledge checks completed)
 11. [ ] [DOM Manipulation and Events](https://www.theodinproject.com/lessons/foundations-dom-manipulation-and-events)
 12. [ ] [Revisiting Rock Paper Scissors](https://www.theodinproject.com/lessons/foundations-revisiting-rock-paper-scissors)
 13. [ ] [Project: Etch-a-Sketch](https://www.theodinproject.com/lessons/foundations-etch-a-sketch)
