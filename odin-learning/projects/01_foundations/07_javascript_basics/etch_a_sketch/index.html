@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="grid">
+        <!-- 
+            <div class="grid-row">
+                <div class="grid-buton">
+                </div>
+            </div>
+        -->
+        </div>
+
+        <div class="controls">
+            <div class="grid-size">
+                <label class="grid-size-label" for="grid-size-input">Grid Size</label>
+                <input class="grid-size-input" type="number" id="grid-size-input">
+            </div>
+
+            <div class="color-mode">
+                <form id="color-mode-form">
+                    <p>Color Mode</p>
+                    
+                    <input class="color-mode-radio" type="radio" id="random" name="color" value="random">
+                    <label class="color-mode-label" id="random" for="random">random</label>
+
+                    <input class="color-mode-radio" type="radio" id="monochrome" name="color" value="monochrome">
+                    <label class="color-mode-label" id="monochrome" for="monochrome">monochrome</label>
+
+                    <input class="color-mode-radio" type="radio" id="rgb" name="color" value="rgb">
+                    <label class="color-mode-label" id="monochrome" for="rgb">rgb</label>
+                </form>
+
+                <div class="color-mode-rgb">
+                    <div class="color-mode-rgb-item" id="red">
+                        <label class="color-mode-rgb-label" for="red">Red</label>
+                        <input class="color-mode-rgb-input" type="number" id="red">
+                    </div>
+
+                    <div class="color-mode-rgb-item" id="green">
+                        <label class="color-mode-rgb-label" for="green">Green</label>
+                        <input class="color-mode-rgb-input" type="number" id="green">
+                    </div>
+                    
+                    <div class="color-mode-rgb-item" id="blue">
+                        <label class="color-mode-rgb-label" for="blue">Blue</label>
+                        <input class="color-mode-rgb-input" type="number" id="blue">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="opacity-mode">
+                <form>
+                    <input class="opacity-mode-checkbox" type="checkbox" id="opacity-checkbox" name="opacity-checkbox" value="opacity-checkbox">
+                    <label class="opacity-mode-label" for="reading">Opacity</label>
+                </form>
+            </div>
+            
+            <button class="controls-button">Update Grid</button>
+        </div>
+
+    </div>
+</body>
+</html>

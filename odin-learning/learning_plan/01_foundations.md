@@ -69,6 +69,8 @@
 13. [ ] [Project: Etch-a-Sketch](https://www.theodinproject.com/lessons/foundations-etch-a-sketch)
 14. [ ] [Object Basics](https://www.theodinproject.com/lessons/foundations-object-basics)
 15. [ ] [Project: Calculator](https://www.theodinproject.com/lessons/foundations-calculator)
-
+13. [✅] [Project: Etch-a-Sketch](https://www.theodinproject.com/lessons/foundations-etch-a-sketch) - Completed on July 26, 2025
+14. [ ] [Object Basics](https://www.theodinproject.com/lessons/foundations-object-basics)
+15. [ ] [Project: Calculator](https://www.theodinproject.com/lessons/foundations-calculator)
 ### 08 [ ] [Conclusion](https://www.theodinproject.com/paths/foundations/courses/foundations#conclusion)
 01. [ ] [Choose Your Path Forward](https://www.theodinproject.com/lessons/foundations-choose-your-path-forward)
