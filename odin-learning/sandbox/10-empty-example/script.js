@@ -102,3 +102,95 @@ let strings = ["Hare", "Krishna", "Hare", "Krishna",
 ];
 console.log(unique(strings));
 
+let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 28 };
+
+let users = [ john, pete, mary ];
+
+let names = users.map(x=>x.name);
+
+console.log(names);
+
+john = { name: "John", surname: "Smith", id: 1 };
+pete = { name: "Pete", surname: "Hunt", id: 2 };
+mary = { name: "Mary", surname: "Key", id: 3 };
+
+users = [ john, pete, mary ];
+
+let usersMapped = users.map(x=>{
+    return {
+        fullName: `${x.name} ${x.surname}`,
+        id: x.id
+    }
+});
+
+/*
+usersMapped = [
+  { fullName: "John Smith", id: 1 },
+  { fullName: "Pete Hunt", id: 2 },
+  { fullName: "Mary Key", id: 3 }
+]
+*/
+
+// alert( usersMapped[0].id ) // 1
+// alert( usersMapped[0].fullName ) // John Smith
+console.log(usersMapped);
+
+const sortByAge = arr =>{
+    arr.sort((a,b) => a.age-b.age);
+};
+
+
+john = { name: "John", age: 25 };
+pete = { name: "Pete", age: 30 };
+mary = { name: "Mary", age: 28 };
+
+arr = [ pete, john, mary ];
+
+sortByAge(arr);
+console.log(arr);
+
+const getAverageAge = arr =>{
+    const ageSum = arr.reduce((ageSum,x)=>ageSum+x.age,0);
+    return ageSum/arr.length;
+};
+
+
+
+john = { name: "John", age: 25 };
+pete = { name: "Pete", age: 30 };
+mary = { name: "Mary", age: 29 };
+
+arr = [ john, pete, mary ];
+
+console.log( getAverageAge(arr) ); // (25 + 30 + 29) / 3 = 28
+
+
+
+const groupById = arr =>{
+    const newUsers = {};
+    arr.forEach(element => {
+        newUsers[element.id]=element;
+    });
+    return newUsers;
+};
+
+
+users = [
+  {id: 'john', name: "John Smith", age: 20},
+  {id: 'ann', name: "Ann Smith", age: 24},
+  {id: 'pete', name: "Pete Peterson", age: 31},
+];
+
+let usersById = groupById(users);
+console.log(usersById);
+
+
+/*
+usersById = {
+  john: {id: 'john', name: "John Smith", age: 20},
+  ann: {id: 'ann', name: "Ann Smith", age: 24},
+  pete: {id: 'pete', name: "Pete Peterson", age: 31},
+}
+*/

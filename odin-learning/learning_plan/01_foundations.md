@@ -9,7 +9,7 @@
 
 ## Chapters & Topics
 
-### 01 [🔄] [Introduction](https://www.theodinproject.com/paths/foundations/courses/foundations#introduction)
+### 01 [✅] [Introduction](https://www.theodinproject.com/paths/foundations/courses/foundations#introduction)
 01. [✅] [How This Course Will Work](https://www.theodinproject.com/lessons/foundations-how-this-course-will-work) - Completed on July 2, 2025
 02. [✅] [Introduction to Web Development](https://www.theodinproject.com/lessons/foundations-introduction-to-web-development) - Completed on July 2, 2025
 03. [✅] [Motivation and Mindset](https://www.theodinproject.com/lessons/foundations-motivation-and-mindset) - Completed on July 2, 2025
@@ -53,7 +53,7 @@
 04. [✅] [Alignment](https://www.theodinproject.com/lessons/foundations-alignment) - Completed on July 15, 2025
 05. [✅] [Project: Landing Page](https://www.theodinproject.com/lessons/foundations-landing-page) - Completed on July 16, 2025
 
-### 07 [🔄] [JavaScript Basics](https://www.theodinproject.com/paths/foundations/courses/foundations#javascript-basics)
+### 07 [✅] [JavaScript Basics](https://www.theodinproject.com/paths/foundations/courses/foundations#javascript-basics)
 01. [✅] [Variables and Operators](https://www.theodinproject.com/lessons/foundations-variables-and-operators) - Completed on July 16, 2025
 02. [✅] [Installing Node.js](https://www.theodinproject.com/lessons/foundations-installing-node-js) - Completed on July 16, 2025
 03. [✅] [Data Types and Conditionals](https://www.theodinproject.com/lessons/foundations-data-types-and-conditionals) - Completed on July 16, 2025
@@ -66,11 +66,8 @@
 10. [✅] [Loops and Arrays](https://www.theodinproject.com/lessons/foundations-loops-and-arrays) - Completed on July 25, 2025 (All knowledge checks completed)
 11. [✅] [DOM Manipulation and Events](https://www.theodinproject.com/lessons/foundations-dom-manipulation-and-events) - Completed on July 25, 2025 (All knowledge checks completed)
 12. [✅] [Revisiting Rock Paper Scissors](https://www.theodinproject.com/lessons/foundations-revisiting-rock-paper-scissors) - Completed on July 25, 2025 (All knowledge checks completed)
-13. [ ] [Project: Etch-a-Sketch](https://www.theodinproject.com/lessons/foundations-etch-a-sketch)
-14. [ ] [Object Basics](https://www.theodinproject.com/lessons/foundations-object-basics)
-15. [ ] [Project: Calculator](https://www.theodinproject.com/lessons/foundations-calculator)
-13. [✅] [Project: Etch-a-Sketch](https://www.theodinproject.com/lessons/foundations-etch-a-sketch) - Completed on July 26, 2025
-14. [ ] [Object Basics](https://www.theodinproject.com/lessons/foundations-object-basics)
-15. [ ] [Project: Calculator](https://www.theodinproject.com/lessons/foundations-calculator)
-### 08 [ ] [Conclusion](https://www.theodinproject.com/paths/foundations/courses/foundations#conclusion)
-01. [ ] [Choose Your Path Forward](https://www.theodinproject.com/lessons/foundations-choose-your-path-forward)
+13. [✅] [Project: Etch-a-Sketch](https://www.theodinproject.com/lessons/foundations-etch-a-sketch)
+14. [✅] [Object Basics](https://www.theodinproject.com/lessons/foundations-object-basics) - Completed on July 27, 2025 (All knowledge checks completed)
+15. [✅] [Project: Calculator](https://www.theodinproject.com/lessons/foundations-calculator) - Completed on July 28, 2025
+### 08 [✅] [Conclusion](https://www.theodinproject.com/paths/foundations/courses/foundations#conclusion)
+01. [✅] [Choose Your Path Forward](https://www.theodinproject.com/lessons/foundations-choose-your-path-forward) - Completed on July 30, 2025 (JavaScript path chosen)
