@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Practice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .svg-container {
+            background-color: white;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+        }
+        
+        /* SVG specific styles */
+        .styled-circle {
+            fill: #FF6B6B;
+            stroke: #4ECDC4;
+            stroke-width: 3;
+        }
+        
+        .styled-rect {
+            fill: #45B7D1;
+            stroke: #96CEB4;
+            stroke-width: 2;
+        }
+        
+        .hover-effect:hover {
+            fill: #FFA07A;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>SVG Practice Playground</h1>
+    
+    <!-- Example 1: Basic Shapes -->
+    <div class="svg-container">
+        <h2>Basic Shapes</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200">
+            <!-- Rectangle -->
+            <rect x="20" y="20" width="80" height="50" fill="lightblue" stroke="navy" stroke-width="2"/>
+            
+            <!-- Circle -->
+            <circle cx="160" cy="45" r="25" fill="lightcoral" stroke="darkred" stroke-width="2"/>
+            
+            <!-- Line -->
+            <line x1="220" y1="20" x2="280" y2="70" stroke="green" stroke-width="3"/>
+            
+            <!-- Text -->
+            <text x="20" y="100" fill="purple" font-size="16" font-family="Arial">Basic SVG Elements</text>
+        </svg>
+    </div>
+    
+    <!-- Example 2: CSS Styled SVG -->
+    <div class="svg-container">
+        <h2>CSS Styled SVG</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" width="300" height="150">
+            <circle class="styled-circle" cx="80" cy="75" r="30"/>
+            <rect class="styled-rect" x="150" y="45" width="60" height="60"/>
+        </svg>
+    </div>
+    
+    <!-- Example 3: Simple House -->
+    <div class="svg-container">
+        <h2>Simple House</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 200" width="250" height="200">
+            <!-- House base -->
+            <rect x="75" y="100" width="100" height="80" fill="#8FBC8F" stroke="#228B22" stroke-width="2"/>
+            
+            <!-- Roof -->
+            <path d="M 65 100 L 125 60 L 185 100 Z" fill="#CD853F" stroke="#8B4513" stroke-width="2"/>
+            
+            <!-- Door -->
+            <rect x="110" y="140" width="20" height="40" fill="#654321"/>
+            
+            <!-- Window -->
+            <circle cx="95" cy="125" r="8" fill="#87CEEB" stroke="#4682B4" stroke-width="1"/>
+            
+            <!-- Another window -->
+            <circle cx="155" cy="125" r="8" fill="#87CEEB" stroke="#4682B4" stroke-width="1"/>
+            
+            <!-- Door knob -->
+            <circle cx="127" cy="160" r="2" fill="#FFD700"/>
+        </svg>
+    </div>
+    
+    <!-- Example 4: Interactive SVG -->
+    <div class="svg-container">
+        <h2>Interactive SVG (hover over shapes)</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100" width="300" height="100">
+            <circle class="hover-effect" cx="60" cy="50" r="25" fill="#FF69B4"/>
+            <rect class="hover-effect" x="120" y="25" width="50" height="50" fill="#32CD32"/>
+            <polygon class="hover-effect" points="220,25 245,75 195,75" fill="#FFD700"/>
+        </svg>
+    </div>
+    
+    <!-- Practice Area -->
+    <div class="svg-container">
+        <h2>Your Practice Area</h2>
+        <p>Try creating your own SVG below! Edit this HTML file to experiment.</p>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200" style="border: 1px dashed #ccc;">
+            
+            <!-- Top semicircle (dome shape) -->
+            <path d="M 50 50 A 25 25 0 0 1 100 50" fill="lightblue" stroke="blue" stroke-width="2"/>
+            <text x="75" y="70" text-anchor="middle" font-size="12">Top Semi</text>
+            
+            <!-- Bottom semicircle (cup shape) -->
+            <path d="M 150 50 A 25 25 0 0 0 200 50" fill="lightcoral" stroke="red" stroke-width="2"/>
+            <text x="175" y="40" text-anchor="middle" font-size="12">Bottom Semi</text>
+            
+            <!-- Left semicircle -->
+            <path d="M 250 25 A 25 25 0 0 1 250 75" fill="lightgreen" stroke="green" stroke-width="2"/>
+            <text x="280" y="55" font-size="12">Left Semi</text>
+            
+            <!-- Right semicircle -->
+            <path d="M 320 25 A 25 25 0 0 0 320 75" fill="yellow" stroke="orange" stroke-width="2"/>
+            <text x="290" y="90" font-size="12">Right Semi</text>
+            
+            <!-- Full circle for comparison -->
+            <circle cx="75" cy="150" r="25" fill="none" stroke="purple" stroke-width="2" stroke-dasharray="5,5"/>
+            <text x="75" y="180" text-anchor="middle" font-size="12">Full Circle</text>
+            
+            <!-- Semicircle with closed path (filled semicircle) -->
+            <path d="M 150 125 A 25 25 0 0 1 200 125 Z" fill="pink" stroke="purple" stroke-width="2"/>
+            <text x="175" y="190" text-anchor="middle" font-size="12">Closed Semi</text>
+            
+            <!-- Your experiment area -->
+            <text x="320" y="130" font-size="14" fill="#666">Try your own:</text>
+            <!-- Add your semicircle experiments here -->
+        </svg>
+    </div>
+    
+    <div style="margin-top: 40px; padding: 20px; background-color: #e8f5e8; border-radius: 8px;">
+        <h3>Quick Reference:</h3>
+        <ul>
+            <li><strong>Rectangle:</strong> &lt;rect x="10" y="10" width="50" height="30" fill="blue"/&gt;</li>
+            <li><strong>Circle:</strong> &lt;circle cx="50" cy="50" r="20" fill="red"/&gt;</li>
+            <li><strong>Line:</strong> &lt;line x1="0" y1="0" x2="100" y2="50" stroke="black" stroke-width="2"/&gt;</li>
+            <li><strong>Text:</strong> &lt;text x="50" y="50" fill="black"&gt;Hello!&lt;/text&gt;</li>
+            <li><strong>Path:</strong> &lt;path d="M 10 10 L 50 50 L 10 90 Z" fill="green"/&gt;</li>
+        </ul>
+    </div>
+</body>
+</html>

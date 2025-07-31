@@ -10,11 +10,11 @@
 
 ## Chapters & Topics
 
-### 01 [ ] [Intermediate HTML Concepts](https://www.theodinproject.com/paths/full-stack-javascript/courses/intermediate-html-and-css#intermediate-html-concepts)
-01. [ ] [Introduction](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-introduction)
-02. [ ] [Emmet](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-emmet)
-03. [ ] [SVG](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-svg)
-04. [ ] [Tables](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-tables)
+### 01 [✅] [Intermediate HTML Concepts](https://www.theodinproject.com/paths/full-stack-javascript/courses/intermediate-html-and-css#intermediate-html-concepts) - Completed on July 30, 2025
+01. [✅] [Introduction](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-introduction) - Completed on July 30, 2025
+02. [✅] [Emmet](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-emmet) - Completed on July 30, 2025
+03. [✅] [SVG](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-svg) - Completed on July 30, 2025
+04. [✅] [Tables](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-tables) - Completed on July 30, 2025
 
 ### 02 [ ] [Intermediate CSS Concepts](https://www.theodinproject.com/paths/full-stack-javascript/courses/intermediate-html-and-css#intermediate-css-concepts)
 01. [ ] [Default Styles](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-default-styles)
