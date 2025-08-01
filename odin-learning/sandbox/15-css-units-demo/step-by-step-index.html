@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viewport Units: Step-by-Step Learning Path</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: calc(2rem + 2vw);
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .learning-path {
+            display: grid;
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .step-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .step-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #4caf50, #2196f3, #ff9800, #e91e63);
+        }
+
+        .step-number {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .step-card h3 {
+            color: #2c3e50;
+            margin: 0 0 15px 0;
+            font-size: 1.4rem;
+        }
+
+        .step-card p {
+            color: #7f8c8d;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .concepts-list {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .concepts-list h4 {
+            margin: 0 0 10px 0;
+            color: #2c3e50;
+            font-size: 1rem;
+        }
+
+        .concepts-list ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .concepts-list li {
+            color: #5a6c7d;
+            margin: 5px 0;
+        }
+
+        .step-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: transform 0.2s ease;
+        }
+
+        .step-link:hover {
+            transform: scale(1.05);
+        }
+
+        .progress-indicator {
+            text-align: center;
+            margin: 40px 0;
+            color: white;
+        }
+
+        .progress-dots {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+        }
+
+        .dot.active {
+            background: white;
+        }
+
+        .summary-card {
+            background: rgba(255,255,255,0.95);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .summary-card h3 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+
+        .key-insight {
+            background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #ff9800;
+            margin: 20px 0;
+        }
+
+        .navigation {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .nav-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-weight: bold;
+            margin: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .nav-button:hover {
+            background: #f8f9fa;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎓 Viewport Units: Complete Learning Path</h1>
+            <p>Master viewport units from absolute basics to advanced techniques</p>
+        </div>
+
+        <div class="learning-path">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>🌟 The Absolute Basics</h3>
+                <p>Start here if viewport units are completely new to you. We'll cover what a viewport is, what vw and vh mean, and how they differ from percentages.</p>
+                
+                <div class="concepts-list">
+                    <h4>📚 You'll Learn:</h4>
+                    <ul>
+                        <li>What is a "viewport"?</li>
+                        <li>vw = viewport width (1vw = 1% of screen width)</li>
+                        <li>vh = viewport height (1vh = 1% of screen height)</li>
+                        <li>The crucial difference between % and vw/vh</li>
+                        <li>Live examples that respond to browser resizing</li>
+                    </ul>
+                </div>
+                
+                <a href="viewport-basics.html" class="step-link">Start with Basics</a>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>🏗️ Full-Height Layouts</h3>
+                <p>Learn the most common practical use of viewport units: creating layouts that fill the entire screen height, like VS Code or Slack.</p>
+                
+                <div class="concepts-list">
+                    <h4>📚 You'll Learn:</h4>
+                    <ul>
+                        <li>Problems with fixed-height layouts</li>
+                        <li>How <code>height: 100vh</code> solves the problem</li>
+                        <li>Combining viewport units with flexbox</li>
+                        <li>Creating app-like interfaces</li>
+                        <li>Before/after comparisons with demos</li>
+                    </ul>
+                </div>
+                
+                <a href="full-height-explained.html" class="step-link">Learn Full-Height</a>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>🔓 Breaking the Container</h3>
+                <p>Master the CSS-Tricks technique for making elements break out of constrained layouts to fill the full viewport width.</p>
+                
+                <div class="concepts-list">
+                    <h4>📚 You'll Learn:</h4>
+                    <ul>
+                        <li>The container constraint problem</li>
+                        <li>Mathematical breakdown of calc(50% - 50vw)</li>
+                        <li>Step-by-step visual explanation</li>
+                        <li>Animated demonstration</li>
+                        <li>Real-world use cases</li>
+                    </ul>
+                </div>
+                
+                <a href="breaking-explained.html" class="step-link">Learn Container Breaking</a>
+            </div>
+        </div>
+
+        <div class="progress-indicator">
+            <h3>📈 Your Learning Progress</h3>
+            <div class="progress-dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            <p>Follow the steps in order for the best learning experience</p>
+        </div>
+
+        <div class="summary-card">
+            <h3>🎯 Why This Step-by-Step Approach Works</h3>
+            <p>Instead of jumping into complex examples, we're building your understanding layer by layer:</p>
+            
+            <div class="key-insight">
+                <strong>🧠 Learning Philosophy:</strong><br>
+                Each step builds on the previous one, ensuring you truly understand the "why" behind each technique, not just the "how". This makes you a better developer who can adapt these concepts to new situations.
+            </div>
+
+            <ul>
+                <li><strong>Step 1:</strong> Builds foundational understanding of what viewport units actually are</li>
+                <li><strong>Step 2:</strong> Shows the most common practical application</li>
+                <li><strong>Step 3:</strong> Introduces an advanced technique with full mathematical explanation</li>
+            </ul>
+        </div>
+
+        <div class="navigation">
+            <h3>🧭 Ready to Continue Your Learning?</h3>
+            <a href="viewport-basics.html" class="nav-button">Start Step 1</a>
+            <a href="../demo-index.html" class="nav-button">See All Demos</a>
+            <a href="#" class="nav-button" onclick="alert('Ready for knowledge check questions!')">Knowledge Check</a>
+        </div>
+
+        <div class="summary-card">
+            <h3>💡 After Completing This Path</h3>
+            <p>You'll have a solid, practical understanding of viewport units that goes beyond memorizing syntax. You'll understand:</p>
+            <ul>
+                <li>✅ When and why to use viewport units</li>
+                <li>✅ How to solve real layout problems</li>
+                <li>✅ The mathematical principles behind advanced techniques</li>
+                <li>✅ How to adapt these concepts to your own projects</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

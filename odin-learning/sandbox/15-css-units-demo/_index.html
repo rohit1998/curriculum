@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Units Demo - Step 2: Em Compounding Effect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .demo-box {
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px solid #333;
+            background-color: #f0f8ff;
+        }
+
+        /* Nested containers to show em compounding */
+        .parent-container {
+            font-size: 2em; /* 2 * 16px = 32px */
+            background-color: #f0f0f0;
+            padding: 10px;
+            border: 1px dashed #666;
+        }
+
+        .child-container {
+            font-size: 1.5em; /* 1.5 * 32px = 48px - COMPOUNDING! */
+            background-color: #e0e0e0;
+            padding: 10px;
+            border: 1px dashed #999;
+            margin: 10px 0;
+        }
+
+        /* Pixel-based sizing (absolute) */
+        .pixel-box {
+            width: 200px;
+            height: 100px;
+            font-size: 16px;
+            margin: 10px;
+            padding: 10px;
+            background-color: #ffcccb;
+        }
+
+        /* Em-based sizing (relative to parent font-size) */
+        .em-box {
+            width: 12.5em; /* 12.5 * parent font size */
+            height: 6.25em;
+            font-size: 1em; /* 1 * parent font size */
+            margin: 0.625em;
+            padding: 0.625em;
+            background-color: #90ee90;
+        }
+
+        /* Rem-based sizing (relative to root font-size) */
+        .rem-box {
+            width: 12.5rem; /* 12.5 * 16px = 200px ALWAYS */
+            height: 6.25rem;
+            font-size: 1rem; /* 1 * 16px = 16px ALWAYS */
+            margin: 0.625rem;
+            padding: 0.625rem;
+            background-color: #dda0dd;
+        }
+
+        .explanation {
+            background-color: #fffacd;
+            padding: 15px;
+            border-left: 4px solid #ffd700;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Units Demo - Step 2: Em Compounding Effect</h1>
+        
+        <div class="explanation">
+            <h3>🎯 What we're demonstrating:</h3>
+            <p>The dangerous "compounding effect" of em units that Cody Loyd warned about!</p>
+            <ul>
+                <li><strong>Red box:</strong> Pixels stay consistent everywhere</li>
+                <li><strong>Green box:</strong> Em units compound through nested containers</li>
+                <li><strong>Purple box:</strong> Rem units stay consistent relative to root</li>
+            </ul>
+        </div>
+
+        <div class="demo-box">
+            <h3>Normal Context (16px base font-size)</h3>
+            <div class="pixel-box">Pixel Box - Always 16px font</div>
+            <div class="em-box">Em Box - 1em = 16px here</div>
+            <div class="rem-box">Rem Box - Always 16px font</div>
+        </div>
+
+        <div class="demo-box">
+            <h3>Parent Container (font-size: 2em = 32px)</h3>
+            <div class="parent-container">
+                <p>Parent has font-size: 2em (32px)</p>
+                
+                <div class="pixel-box">Pixel Box - Still 16px font</div>
+                <div class="em-box">Em Box - 1em = 32px now!</div>
+                <div class="rem-box">Rem Box - Still 16px font</div>
+
+                <div class="child-container">
+                    <p><strong>Child Container (font-size: 1.5em = 1.5 * 32px = 48px!)</strong></p>
+                    
+                    <div class="pixel-box">Pixel Box - Still 16px font</div>
+                    <div class="em-box">Em Box - 1em = 48px now! 😱</div>
+                    <div class="rem-box">Rem Box - Still 16px font</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="explanation">
+            <h3>🔍 Key Observation:</h3>
+            <p><strong>This is why Cody Loyd prefers rem over em!</strong></p>
+            <ul>
+                <li>📍 <strong>Pixel boxes:</strong> Stay exactly 16px everywhere</li>
+                <li>🔄 <strong>Em boxes:</strong> Get progressively larger as they inherit parent font-sizes</li>
+                <li>📏 <strong>Rem boxes:</strong> Always 16px because they reference the root element</li>
+            </ul>
+            <p>Em compounding can lead to "confusing size-related bugs" - exactly what the article warned about!</p>
+        </div>
+    </div>
+</body>
+</html>

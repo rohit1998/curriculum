@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Up: Simple Full-Height Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* First, let's build without viewport units to see the problem */
+        .problem-demo {
+            background-color: #ffebee;
+            border: 3px solid #f44336;
+        }
+
+        .problem-header {
+            background-color: #f44336;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .problem-content {
+            padding: 20px;
+            background-color: #e3f2fd;
+            height: 300px; /* Fixed height - this is the problem! */
+        }
+
+        .problem-footer {
+            background-color: #424242;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Now let's solve it with viewport units */
+        .solution-demo {
+            height: 100vh; /* This is the magic! */
+            display: flex;
+            flex-direction: column;
+            background-color: #e8f5e8;
+            border: 3px solid #4caf50;
+        }
+
+        .solution-header {
+            background-color: #4caf50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            /* No height specified - it takes only what it needs */
+        }
+
+        .solution-content {
+            flex: 1; /* This takes up all remaining space */
+            padding: 20px;
+            background-color: #e3f2fd;
+            overflow-y: auto; /* Scrolls if content is too long */
+        }
+
+        .solution-footer {
+            background-color: #424242;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            /* No height specified - it takes only what it needs */
+        }
+
+        .step-container {
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .explanation {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .code-block {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+
+        .demo-toggle {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 20px 0;
+        }
+
+        .demo-toggle:hover {
+            background-color: #0056b3;
+        }
+
+        .viewport-indicator {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 14px;
+            z-index: 1000;
+        }
+
+        /* Hide step container when showing full demos */
+        .full-demo-mode .step-container {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="viewport-indicator" id="viewport-info">
+        Viewport: <span id="viewport-size"></span>
+    </div>
+
+    <div class="step-container" id="step-container">
+        <h1>🏗️ Building Up: Full-Height Layout</h1>
+        
+        <div class="explanation">
+            <h3>🎯 The Goal:</h3>
+            <p>Create a layout where the header and footer stay in place, and the content area fills the remaining screen space - like VS Code, Slack, or any desktop app.</p>
+        </div>
+
+        <h2>❌ The Problem Without Viewport Units</h2>
+        <div class="explanation">
+            <p>Let's first see what happens when we try to build this with traditional units:</p>
+        </div>
+
+        <div class="code-block">
+.content {
+    height: 300px; /* Fixed height - doesn't adapt to screen size! */
+}</div>
+
+        <button class="demo-toggle" onclick="showProblem()">Show Problem Demo</button>
+
+        <div class="explanation">
+            <p><strong>Problems with this approach:</strong></p>
+            <ul>
+                <li>🔧 Fixed height doesn't adapt to different screen sizes</li>
+                <li>📱 Terrible on mobile - too much or too little space</li>
+                <li>🖥️ Leaves blank space on large screens</li>
+                <li>😤 Content might overflow or be cut off</li>
+            </ul>
+        </div>
+
+        <h2>✅ The Solution With Viewport Units</h2>
+        <div class="explanation">
+            <p>Now let's solve this with <code>100vh</code> (100% of viewport height):</p>
+        </div>
+
+        <div class="code-block">
+.container {
+    height: 100vh; /* Takes up exactly the full screen height! */
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1; /* Takes up all remaining space */
+}</div>
+
+        <button class="demo-toggle" onclick="showSolution()">Show Solution Demo</button>
+
+        <div class="explanation">
+            <h3>🔍 What's Happening Step by Step:</h3>
+            <ol>
+                <li><strong>height: 100vh</strong> - Container takes up exactly the full viewport height</li>
+                <li><strong>display: flex; flex-direction: column</strong> - Stack elements vertically</li>
+                <li><strong>Header & Footer</strong> - Take only the space they need</li>
+                <li><strong>flex: 1 on content</strong> - Grows to fill all remaining space</li>
+            </ol>
+        </div>
+
+        <div class="explanation">
+            <h3>💡 Why This Works:</h3>
+            <ul>
+                <li>🎯 <strong>Responsive:</strong> Adapts to any screen size automatically</li>
+                <li>📱 <strong>Mobile-friendly:</strong> No wasted space, no scrolling issues</li>
+                <li>🖥️ <strong>Desktop-perfect:</strong> Uses full screen real estate</li>
+                <li>⚡ <strong>App-like:</strong> Behaves like native desktop applications</li>
+            </ul>
+        </div>
+
+        <button class="demo-toggle" onclick="showComparison()">Compare Side by Side</button>
+    </div>
+
+    <!-- Problem Demo -->
+    <div id="problem-demo" class="problem-demo" style="display: none;">
+        <div class="problem-header">
+            <h2>❌ Problem: Fixed Height Layout</h2>
+            <p>Header with fixed spacing</p>
+        </div>
+        <div class="problem-content">
+            <h3>Content Area (Fixed 300px height)</h3>
+            <p>This content area is exactly 300px tall, regardless of your screen size.</p>
+            <p><strong>Problems:</strong></p>
+            <ul>
+                <li>On small screens: Might overflow</li>
+                <li>On large screens: Leaves blank space below</li>
+                <li>Not responsive to different device sizes</li>
+                <li>Doesn't feel like a proper app</li>
+            </ul>
+            <p>Try resizing your browser and see how this doesn't adapt!</p>
+        </div>
+        <div class="problem-footer">
+            Footer - Notice the blank space below on large screens
+        </div>
+        <div style="text-align: center; padding: 20px; background-color: #ffcdd2;">
+            <button class="demo-toggle" onclick="backToSteps()">Back to Explanation</button>
+        </div>
+    </div>
+
+    <!-- Solution Demo -->
+    <div id="solution-demo" class="solution-demo" style="display: none;">
+        <div class="solution-header">
+            <h2>✅ Solution: 100vh Layout</h2>
+            <p>Header takes only what it needs</p>
+        </div>
+        <div class="solution-content">
+            <h3>Content Area (Flexible Height)</h3>
+            <p>This content area uses <code>flex: 1</code> to fill all remaining space after the header and footer!</p>
+            <p><strong>Benefits:</strong></p>
+            <ul>
+                <li>✨ Always fills the exact screen height</li>
+                <li>📱 Perfect on mobile devices</li>
+                <li>🖥️ Uses full real estate on large screens</li>
+                <li>🔄 Automatically adapts when you resize</li>
+                <li>⚡ Feels like a native app</li>
+            </ul>
+            <p>Try resizing your browser and see how this perfectly adapts!</p>
+            <p>This is exactly how modern web apps like VS Code, Slack, Discord, and others work.</p>
+            
+            <div style="background-color: #e3f2fd; padding: 15px; margin: 15px 0; border-radius: 5px;">
+                <strong>🎯 Key Insight:</strong> The combination of <code>100vh</code> + flexbox gives us precise control over screen real estate, making web apps feel like desktop apps!
+            </div>
+        </div>
+        <div class="solution-footer">
+            Footer stays at bottom - no blank space!
+            <br>
+            <button class="demo-toggle" onclick="backToSteps()">Back to Explanation</button>
+        </div>
+    </div>
+
+    <script>
+        function updateViewportInfo() {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            document.getElementById('viewport-size').textContent = `${width}px × ${height}px`;
+        }
+
+        function showProblem() {
+            document.getElementById('step-container').style.display = 'none';
+            document.getElementById('problem-demo').style.display = 'block';
+            document.getElementById('solution-demo').style.display = 'none';
+        }
+
+        function showSolution() {
+            document.getElementById('step-container').style.display = 'none';
+            document.getElementById('problem-demo').style.display = 'none';
+            document.getElementById('solution-demo').style.display = 'flex';
+        }
+
+        function showComparison() {
+            // For now, just show the solution - we could make this more complex
+            showSolution();
+        }
+
+        function backToSteps() {
+            document.getElementById('step-container').style.display = 'block';
+            document.getElementById('problem-demo').style.display = 'none';
+            document.getElementById('solution-demo').style.display = 'none';
+        }
+
+        // Update viewport info on load and resize
+        updateViewportInfo();
+        window.addEventListener('resize', updateViewportInfo);
+    </script>
+</body>
+</html>

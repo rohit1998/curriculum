@@ -1,7 +1,7 @@
 # CSS Sandbox Folder Naming & Usage Guide
 
 ## Folder Naming Convention
-- Use a two-digit prefix for ordering, followed by a short, descriptive name.
+- Use a two-digit prefix for ordering, followed by a short, descriptive name. list all folders in odin-learning/sandbox to know whats the next free number.
   - Example: `01-basic-selectors`, `02-css-margin-examples`, `03-css-pseudo-elements-example`
 - Use hyphens (`-`) to separate words.
 

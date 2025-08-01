@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Units Demo - Complete Walkthrough</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 40px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: calc(1.5rem + 2vw);
+        }
+
+        .header p {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+        }
+
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .demo-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 5px solid;
+        }
+
+        .demo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .demo-card.step1 { border-left-color: #e74c3c; }
+        .demo-card.step2 { border-left-color: #f39c12; }
+        .demo-card.step3 { border-left-color: #2ecc71; }
+        .demo-card.step4 { border-left-color: #3498db; }
+        .demo-card.step5 { border-left-color: #9b59b6; }
+
+        .demo-card h3 {
+            margin-top: 0;
+            color: #2c3e50;
+            font-size: 1.3rem;
+        }
+
+        .demo-card p {
+            color: #7f8c8d;
+            margin: 15px 0;
+        }
+
+        .demo-card .concepts {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-size: 0.9rem;
+        }
+
+        .demo-card .concepts strong {
+            color: #2c3e50;
+        }
+
+        .demo-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: transform 0.2s ease;
+        }
+
+        .demo-link:hover {
+            transform: scale(1.05);
+        }
+
+        .summary {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            margin: 40px 0;
+        }
+
+        .summary h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .key-insights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .insight {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+
+        .insight h4 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+
+        .navigation {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .nav-button {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 30px;
+            background: #2c3e50;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+
+        .nav-button:hover {
+            background: #34495e;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎨 CSS Units Masterclass</h1>
+        <p>Interactive demos covering everything from the MDN guide, Cody Loyd's article, and CSS-Tricks viewport units tutorial</p>
+    </div>
+
+    <div class="demo-grid">
+        <div class="demo-card step1">
+            <h3>Step 1: Basic Units Comparison</h3>
+            <p>See the fundamental differences between px, em, and rem units in action.</p>
+            <div class="concepts">
+                <strong>Key Concepts:</strong> Absolute vs relative units, em compounding effect, rem consistency
+            </div>
+            <a href="index.html" class="demo-link">View Demo</a>
+        </div>
+
+        <div class="demo-card step3">
+            <h3>Step 2: Responsive Typography</h3>
+            <p>Learn the calc() technique for smooth, controlled responsive text scaling.</p>
+            <div class="concepts">
+                <strong>Key Concepts:</strong> calc() function, viewport-based typography, growth rate control
+            </div>
+            <a href="responsive-typography.html" class="demo-link">View Demo</a>
+        </div>
+
+        <div class="demo-card step4">
+            <h3>Step 3: Viewport Layouts</h3>
+            <p>Master full-height layouts, hero sections, and sticky footers with viewport units.</p>
+            <div class="concepts">
+                <strong>Key Concepts:</strong> 100vh layouts, min-height techniques, hero sections
+            </div>
+            <a href="viewport-layouts.html" class="demo-link">View Demo</a>
+        </div>
+
+        <div class="demo-card step5">
+            <h3>Step 4: Breaking Containers</h3>
+            <p>The CSS-Tricks technique for full-width elements within constrained layouts.</p>
+            <div class="concepts">
+                <strong>Key Concepts:</strong> Negative margins, viewport calculations, aspect ratios
+            </div>
+            <a href="breaking-containers.html" class="demo-link">View Demo</a>
+        </div>
+    </div>
+
+    <div class="summary">
+        <h2>🎯 Key Insights from Our Journey</h2>
+        
+        <div class="key-insights">
+            <div class="insight">
+                <h4>🔧 Practical Recommendations</h4>
+                <ul>
+                    <li><strong>Font-size:</strong> Use rem (accessibility)</li>
+                    <li><strong>Spacing:</strong> Use px (consistent layouts)</li>
+                    <li><strong>Layouts:</strong> Use vh/vw (responsive design)</li>
+                    <li><strong>Avoid:</strong> em for most cases (compounding issues)</li>
+                </ul>
+            </div>
+
+            <div class="insight">
+                <h4>🎨 Advanced Techniques</h4>
+                <ul>
+                    <li><strong>calc():</strong> Combines units for responsive typography</li>
+                    <li><strong>Container breaking:</strong> calc(50% - 50vw) for full-width</li>
+                    <li><strong>Aspect ratios:</strong> calc(100vw * (9/16)) for videos</li>
+                    <li><strong>Growth rates:</strong> Different scaling for headings vs body</li>
+                </ul>
+            </div>
+
+            <div class="insight">
+                <h4>♿ Accessibility Focus</h4>
+                <ul>
+                    <li><strong>User preferences:</strong> rem respects browser font-size</li>
+                    <li><strong>Zoom behavior:</strong> All units scale with browser zoom</li>
+                    <li><strong>Conscious choices:</strong> Consider user needs in unit selection</li>
+                    <li><strong>Flexible layouts:</strong> Design for text size changes</li>
+                </ul>
+            </div>
+
+            <div class="insight">
+                <h4>🚀 Real-World Applications</h4>
+                <ul>
+                    <li><strong>Web apps:</strong> Full-height layouts with vh</li>
+                    <li><strong>Marketing sites:</strong> Hero sections and breakouts</li>
+                    <li><strong>Content sites:</strong> Responsive typography</li>
+                    <li><strong>Dashboards:</strong> Viewport-constrained interfaces</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <h3>🧭 Ready for Knowledge Check?</h3>
+        <p>You've seen all the concepts in action. Time to test your understanding!</p>
+        <a href="#" class="nav-button" onclick="alert('Time to move to knowledge check questions with your teacher!')">Ready for Questions</a>
+        <a href="../" class="nav-button">Back to Sandbox</a>
+    </div>
+
+    <div class="summary">
+        <h2>📚 What We've Covered</h2>
+        <p>These demos brought to life all the key concepts from your three assignments:</p>
+        <ul>
+            <li><strong>MDN CSS Values and Units:</strong> Comprehensive overview of all unit types and their behaviors</li>
+            <li><strong>Cody Loyd's Article:</strong> Practical advice on when to use px vs em vs rem</li>
+            <li><strong>CSS-Tricks Viewport Units:</strong> Creative applications for responsive design and layouts</li>
+        </ul>
+        <p>You now have hands-on experience with the theory, making you ready to tackle the knowledge check questions!</p>
+    </div>
+</body>
+</html>

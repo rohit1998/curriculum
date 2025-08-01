@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Units Demo - Step 3: Responsive Typography</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .demo-section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 2px solid #333;
+            background-color: #f9f9f9;
+        }
+
+        /* BAD: Direct viewport units - too dramatic scaling */
+        .bad-typography {
+            font-size: 5vw; /* This scales way too quickly! */
+            color: #d32f2f;
+            border: 2px dashed #d32f2f;
+            padding: 10px;
+            background-color: #ffebee;
+        }
+
+        /* GOOD: calc() with base size + viewport adjustment */
+        .good-typography {
+            font-size: calc(16px + 1vw); /* Starts at 16px, grows 1px per 100px viewport */
+            color: #2e7d32;
+            border: 2px solid #2e7d32;
+            padding: 10px;
+            background-color: #e8f5e8;
+        }
+
+        /* BETTER: Different growth rates for different elements */
+        .responsive-heading {
+            font-size: calc(1.2em + 3vw);
+            color: #1976d2;
+            margin: 0;
+        }
+
+        .responsive-body {
+            font-size: calc(16px + 0.5vw);
+            line-height: calc(1.1em + 0.5vw);
+            color: #424242;
+        }
+
+        /* Constrain with media query */
+        @media (min-width: 50em) {
+            .responsive-heading {
+                font-size: 50px; /* Cap the maximum size */
+            }
+        }
+
+        .explanation {
+            background-color: #fff3e0;
+            padding: 15px;
+            border-left: 4px solid #ff9800;
+            margin: 20px 0;
+        }
+
+        .resize-hint {
+            background-color: #e3f2fd;
+            padding: 15px;
+            border-left: 4px solid #2196f3;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Units Demo - Step 3: Responsive Typography</h1>
+        
+        <div class="resize-hint">
+            🔄 RESIZE YOUR BROWSER WINDOW to see the typography scale!
+        </div>
+
+        <div class="explanation">
+            <h3>🎯 What we're demonstrating:</h3>
+            <p>Different approaches to responsive typography using viewport units, showing the problems and solutions from the CSS-Tricks article.</p>
+        </div>
+
+        <div class="demo-section">
+            <h3>❌ BAD: Direct Viewport Units (font-size: 5vw)</h3>
+            <div class="bad-typography">
+                This text scales too dramatically! It goes from unreadably small to huge very quickly. This is why the article said direct viewport units are "dangerous" for typography.
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h3>✅ GOOD: Base Size + Viewport (font-size: calc(16px + 1vw))</h3>
+            <div class="good-typography">
+                This text has a minimum base size of 16px and grows 1px for every 100px of viewport width. Much more controlled and readable at all sizes!
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h3>✨ BETTER: Different Growth Rates</h3>
+            <h2 class="responsive-heading">This heading grows faster (calc(1.2em + 3vw))</h2>
+            <p class="responsive-body">
+                This body text grows slower (calc(16px + 0.5vw)) and even has responsive line-height (calc(1.1em + 0.5vw)). 
+                This creates a more dynamic typographic scale on larger screens while keeping everything readable on mobile.
+                Notice how the heading grows more dramatically than this paragraph, creating better hierarchy.
+            </p>
+            <p class="responsive-body">
+                The heading is also constrained with a media query at 50em width to prevent it from becoming too large.
+                This technique gives you "no media-queries required" responsive typography with just a single breakpoint for constraints.
+            </p>
+        </div>
+
+        <div class="explanation">
+            <h3>🔍 Key Insights:</h3>
+            <ul>
+                <li><strong>calc() is the secret sauce</strong> - combines fixed base with flexible scaling</li>
+                <li><strong>Different elements can have different growth rates</strong> - headings vs body text</li>
+                <li><strong>One media query can constrain maximum sizes</strong> when needed</li>
+                <li><strong>Line-height can also be responsive</strong> for better readability</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Units Demo - Step 4: Viewport Layouts</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Full-height layout using 100vh */
+        .app-container {
+            height: 100vh;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas: 
+                "header"
+                "main"
+                "footer";
+        }
+
+        .header {
+            grid-area: header;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .main-content {
+            grid-area: main;
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            overflow: hidden;
+        }
+
+        .sidebar {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-right: 1px solid #dee2e6;
+            overflow-y: auto;
+        }
+
+        .content-area {
+            padding: 2rem;
+            overflow-y: auto;
+            background-color: white;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: #343a40;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        /* Hero section with viewport height */
+        .hero-section {
+            min-height: 80vh; /* Takes up 80% of viewport height */
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600"><rect fill="%23f0f8ff" width="1000" height="600"/><circle fill="%23e6f3ff" cx="200" cy="150" r="80"/><circle fill="%23cce7ff" cx="800" cy="400" r="120"/><polygon fill="%23b3dbff" points="500,100 600,300 400,300"/></svg>');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: calc(2rem + 4vw);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: calc(1rem + 1vw);
+            max-width: 600px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* Content sections with different vh constraints */
+        .section {
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .full-height-section {
+            min-height: 100vh;
+            background: linear-gradient(45deg, #ffeaa7, #fab1a0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .constrained-section {
+            max-height: 60vh;
+            background: linear-gradient(45deg, #a8e6cf, #88d8a3);
+            overflow-y: auto;
+            padding: 2rem;
+        }
+
+        /* Sticky footer using min-height */
+        .sticky-footer-demo {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sticky-footer-demo .content {
+            flex: 1;
+            padding: 2rem;
+            background-color: #f8f9fa;
+        }
+
+        .sticky-footer-demo .footer {
+            background-color: #dc3545;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .explanation {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+
+        .demo-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button class="demo-toggle" onclick="toggleDemo()">Switch Demo</button>
+
+    <!-- Demo 1: Full-height app layout -->
+    <div id="demo1" class="app-container">
+        <header class="header">
+            <h1>Full-Height App Layout (height: 100vh)</h1>
+            <p>Header stays fixed - this is like VS Code or any desktop app</p>
+        </header>
+        
+        <main class="main-content">
+            <aside class="sidebar">
+                <h3>Sidebar</h3>
+                <ul>
+                    <li>Navigation Item 1</li>
+                    <li>Navigation Item 2</li>
+                    <li>Navigation Item 3</li>
+                    <li>Navigation Item 4</li>
+                    <li>Navigation Item 5</li>
+                </ul>
+                <div class="explanation">
+                    <p><strong>💡 Key Point:</strong> The sidebar scrolls independently if content overflows!</p>
+                </div>
+            </aside>
+            
+            <section class="content-area">
+                <h2>Main Content Area</h2>
+                <p>This content area scrolls independently. The header and footer stay in place.</p>
+                
+                <div class="explanation">
+                    <h3>🎯 What makes this work:</h3>
+                    <ul>
+                        <li><code>height: 100vh</code> on container constrains to viewport</li>
+                        <li>CSS Grid with <code>grid-template-rows: auto 1fr auto</code></li>
+                        <li><code>overflow-y: auto</code> on scrollable sections</li>
+                        <li>Perfect for web apps, dashboards, admin interfaces</li>
+                    </ul>
+                </div>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+            </section>
+        </main>
+        
+        <footer class="footer">
+            <p>Footer stays fixed at bottom - height: 100vh magic! 🎉</p>
+        </footer>
+    </div>
+
+    <!-- Demo 2: Hero sections and content layouts -->
+    <div id="demo2" style="display: none;">
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1>Hero Section</h1>
+                <p>This hero takes up 80% of viewport height (min-height: 80vh) and has responsive typography using calc()!</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="explanation">
+                <h3>🎯 Hero Section Techniques:</h3>
+                <ul>
+                    <li><code>min-height: 80vh</code> - ensures minimum height but allows growth</li>
+                    <li>Responsive typography: <code>calc(2rem + 4vw)</code></li>
+                    <li>Always visible above the fold, never pushes content off screen</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="full-height-section">
+            <div>
+                <h2>Full-Height Section</h2>
+                <p>This section uses <code>min-height: 100vh</code><br>Perfect for landing page sections!</p>
+            </div>
+        </div>
+
+        <div class="constrained-section">
+            <h2>Constrained Section (max-height: 60vh)</h2>
+            <p>This section is constrained to 60% of viewport height and scrolls if content overflows.</p>
+            
+            <div class="explanation">
+                <h3>🔍 Different vh strategies:</h3>
+                <ul>
+                    <li><code>height: 100vh</code> - Exact viewport height</li>
+                    <li><code>min-height: 100vh</code> - At least viewport height (for sticky footers)</li>
+                    <li><code>max-height: 60vh</code> - No more than 60% viewport height</li>
+                </ul>
+            </div>
+            
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        </div>
+
+        <div class="sticky-footer-demo">
+            <div class="content">
+                <h2>Sticky Footer Demo</h2>
+                <p>This layout uses <code>min-height: 100vh</code> and flexbox.</p>
+                <p>The footer will stick to the bottom of the viewport until pushed down by content.</p>
+                
+                <div class="explanation">
+                    <h3>🎯 Sticky Footer Technique:</h3>
+                    <ul>
+                        <li><code>min-height: 100vh</code> on container</li>
+                        <li><code>display: flex; flex-direction: column</code></li>
+                        <li><code>flex: 1</code> on main content area</li>
+                        <li>Footer stays at bottom even with little content!</li>
+                    </ul>
+                </div>
+            </div>
+            <footer class="footer">
+                Sticky Footer - Always at bottom! 🎯
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        let currentDemo = 1;
+        
+        function toggleDemo() {
+            const demo1 = document.getElementById('demo1');
+            const demo2 = document.getElementById('demo2');
+            const button = document.querySelector('.demo-toggle');
+            
+            if (currentDemo === 1) {
+                demo1.style.display = 'none';
+                demo2.style.display = 'block';
+                button.textContent = 'Show App Layout';
+                currentDemo = 2;
+            } else {
+                demo1.style.display = 'grid';
+                demo2.style.display = 'none';
+                button.textContent = 'Show Hero Sections';
+                currentDemo = 1;
+            }
+        }
+    </script>
+</body>
+</html>

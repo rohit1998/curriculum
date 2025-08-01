@@ -16,9 +16,9 @@
 03. [✅] [SVG](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-svg) - Completed on July 30, 2025
 04. [✅] [Tables](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-tables) - Completed on July 30, 2025
 
-### 02 [ ] [Intermediate CSS Concepts](https://www.theodinproject.com/paths/full-stack-javascript/courses/intermediate-html-and-css#intermediate-css-concepts)
-01. [ ] [Default Styles](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-default-styles)
-02. [ ] [CSS Units](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-css-units)
+### 02 [🔄] [Intermediate CSS Concepts](https://www.theodinproject.com/paths/full-stack-javascript/courses/intermediate-html-and-css#intermediate-css-concepts)
+01. [✅] [Default Styles](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-default-styles) - Completed on July 31, 2025
+02. [✅] [CSS Units](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-css-units) - Completed on July 31, 2025
 03. [ ] [More Text Styles](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-more-text-styles)
 04. [ ] [More CSS Properties](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-more-css-properties)
 05. [ ] [Advanced Selectors](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-advanced-selectors)
