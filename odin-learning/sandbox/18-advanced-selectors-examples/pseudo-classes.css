@@ -1,0 +1,37 @@
+/* Dynamic/User Action Pseudo-classes */
+button:hover {
+  background: #b2dfdb;
+  color: #00695c;
+}
+button:active {
+  background: #ffccbc;
+  color: #bf360c;
+}
+input:focus {
+  border: 2px solid #1976d2;
+  outline: none;
+}
+a:link {
+  color: #1976d2;
+}
+a:visited {
+  color: #7b1fa2;
+}
+
+/* Structural Pseudo-classes */
+ul li:first-child {
+  font-weight: bold;
+  color: #388e3c;
+}
+ul li:last-child {
+  font-style: italic;
+  color: #d84315;
+}
+ul li:nth-child(even) {
+  background: #f0f4c3;
+}
+ul li:empty {
+  background: #ffcdd2;
+  border: 1px dashed #b71c1c;
+  min-height: 1em;
+}

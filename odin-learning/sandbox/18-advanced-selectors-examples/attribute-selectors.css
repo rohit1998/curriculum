@@ -1,0 +1,26 @@
+/* Select all elements with a src attribute */
+[src] {
+  border: 2px solid #1976d2;
+}
+
+/* Select img elements with a src attribute ending in .jpg */
+img[src$='.jpg'] {
+  box-shadow: 0 0 8px #fbc02d;
+}
+
+/* Select input elements with type="text" */
+input[type="text"] {
+  background: #e0f7fa;
+}
+
+/* Select all classes that begin with 'aus' */
+[class^='aus'] {
+  color: #388e3c;
+  font-weight: bold;
+}
+
+/* Select all classes that begin with 'thunder' */
+[class^='thunder'] {
+  background: #fff9c4;
+  border: 1px solid #fbc02d;
+}

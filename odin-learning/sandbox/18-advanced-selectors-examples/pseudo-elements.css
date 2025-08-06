@@ -1,0 +1,29 @@
+/* ::first-letter pseudo-element */
+.first-letter::first-letter {
+  font-size: 2em;
+  color: #d84315;
+  font-weight: bold;
+}
+
+/* ::first-line pseudo-element */
+.first-line::first-line {
+  color: #1976d2;
+  background: #e3f2fd;
+  font-variant: small-caps;
+}
+
+/* ::before and ::after pseudo-elements */
+.before-after::before {
+  content: '👉 ';
+  color: #388e3c;
+}
+.before-after::after {
+  content: ' 👈';
+  color: #388e3c;
+}
+
+/* ::selection pseudo-element */
+.selection::selection {
+  background: #fff176;
+  color: #1a237e;
+}

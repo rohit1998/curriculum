@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opacity Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+            min-height: 100vh;
+        }
+        
+        /* Opacity Examples */
+        .opacity-example {
+            width: 200px;
+            height: 120px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #ff6b6b;
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+            display: inline-block;
+            vertical-align: top;
+            font-weight: bold;
+        }
+        
+        .opacity-100 {
+            opacity: 1;
+        }
+        
+        .opacity-75 {
+            opacity: 0.75;
+        }
+        
+        .opacity-50 {
+            opacity: 0.5;
+        }
+        
+        .opacity-25 {
+            opacity: 0.25;
+        }
+        
+        .opacity-10 {
+            opacity: 0.1;
+        }
+        
+        .opacity-0 {
+            opacity: 0;
+        }
+        
+        /* Practical Examples */
+        .overlay-example {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200"><rect width="300" height="200" fill="%234ecdc4"/><circle cx="150" cy="100" r="50" fill="%23fff"/></svg>');
+            border-radius: 8px;
+            margin: 20px;
+            display: inline-block;
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+        
+        .overlay-light {
+            opacity: 0.3;
+        }
+        
+        .overlay-medium {
+            opacity: 0.6;
+        }
+        
+        .overlay-heavy {
+            opacity: 0.9;
+        }
+        
+        .hover-effect {
+            transition: opacity 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .hover-effect:hover {
+            opacity: 0.7;
+        }
+        
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s ease-in forwards;
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Opacity Properties - Step by Step</h1>
+    
+    <h2>Basic Opacity Values</h2>
+    <p>Opacity ranges from 0 (completely transparent) to 1 (completely opaque):</p>
+    
+    <div class="opacity-example opacity-100">
+        opacity: 1<br>(100% visible)
+    </div>
+    
+    <div class="opacity-example opacity-75">
+        opacity: 0.75<br>(75% visible)
+    </div>
+    
+    <div class="opacity-example opacity-50">
+        opacity: 0.5<br>(50% visible)
+    </div>
+    
+    <div class="opacity-example opacity-25">
+        opacity: 0.25<br>(25% visible)
+    </div>
+    
+    <div class="opacity-example opacity-10">
+        opacity: 0.1<br>(10% visible)
+    </div>
+    
+    <div class="opacity-example opacity-0">
+        opacity: 0<br>(invisible)
+    </div>
+    
+    <h2>Practical Uses</h2>
+    
+    <h3>1. Image Overlays</h3>
+    <div class="overlay-example">
+        <div class="overlay overlay-light">Light Overlay (0.3)</div>
+    </div>
+    
+    <div class="overlay-example">
+        <div class="overlay overlay-medium">Medium Overlay (0.6)</div>
+    </div>
+    
+    <div class="overlay-example">
+        <div class="overlay overlay-heavy">Heavy Overlay (0.9)</div>
+    </div>
+    
+    <h3>2. Hover Effects</h3>
+    <div class="opacity-example hover-effect" style="background-color: #4ecdc4;">
+        Hover me!<br>Opacity changes on hover
+    </div>
+    
+    <h3>3. Fade-in Animation</h3>
+    <div class="opacity-example fade-in" style="background-color: #ffcc02; color: black;">
+        Fade In Animation<br>Using CSS animation
+    </div>
+    
+    <h2>Key Points</h2>
+    <ul>
+        <li><strong>Range:</strong> 0 (invisible) to 1 (fully visible)</li>
+        <li><strong>Inheritance:</strong> Child elements inherit parent opacity</li>
+        <li><strong>Performance:</strong> Great for animations and transitions</li>
+        <li><strong>Use cases:</strong> Overlays, hover effects, loading states</li>
+    </ul>
+</body>
+</html>

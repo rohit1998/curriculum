@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Text Properties Examples</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background: #f5f5f5;
+        }
+        
+        .example-section {
+            background: white;
+            margin: 30px 0;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .demo {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #007bff;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .code {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+            font-size: 14px;
+            overflow-x: auto;
+        }
+        
+        /* font-style examples */
+        .visual-italic {
+            font-style: italic;
+        }
+        
+        /* letter-spacing examples */
+        .normal-spacing {
+            letter-spacing: normal;
+        }
+        
+        .wide-spacing {
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        
+        .tight-spacing {
+            letter-spacing: -0.02em;
+        }
+        
+        .super-wide-spacing {
+            letter-spacing: 0.5em;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            text-align: center;
+            color: #6c757d;
+        }
+        
+        /* line-height examples */
+        .tight-lines {
+            line-height: 1.0;
+        }
+        
+        .normal-lines {
+            line-height: 1.5;
+        }
+        
+        .loose-lines {
+            line-height: 2.2;
+        }
+        
+        /* text-transform examples */
+        .uppercase {
+            text-transform: uppercase;
+        }
+        
+        .lowercase {
+            text-transform: lowercase;
+        }
+        
+        .capitalize {
+            text-transform: capitalize;
+        }
+        
+        .full-width {
+            text-transform: full-width;
+        }
+        
+        /* text-shadow examples */
+        .simple-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-size: 1.5rem;
+            color: #2c3e50;
+        }
+        
+        .multiple-shadows {
+            text-shadow: 
+                1px 1px 2px rgba(255,0,0,0.3),
+                2px 2px 4px rgba(0,255,0,0.3),
+                3px 3px 6px rgba(0,0,255,0.3);
+            font-size: 1.5rem;
+            color: #2c3e50;
+        }
+        
+        .glow-text {
+            text-shadow: 
+                0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 15px #00ff00,
+                0 0 20px #00ff00,
+                0 0 35px #00ff00;
+            color: #00ff00;
+            background: #1a1a1a;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+        
+        /* Ellipsis examples */
+        .ellipsis-container {
+            width: 250px;
+            border: 2px solid #007bff;
+            padding: 10px;
+            margin: 10px 0;
+            background: white;
+        }
+        
+        .ellipsis-text {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .ellipsis-multiline {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 1.4;
+            max-height: calc(1.4em * 3);
+        }
+        
+        /* Interactive examples */
+        .hover-demo {
+            padding: 15px;
+            background: #e3f2fd;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        
+        .hover-demo:hover {
+            letter-spacing: 0.1em;
+            background: #bbdefb;
+            border-color: #2196f3;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+        
+        .semantic-example {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Advanced Text Properties - Interactive Examples</h1>
+    
+    <!-- Font Style -->
+    <div class="example-section">
+        <h2>1. font-style: Semantic vs Visual</h2>
+        
+        <div class="semantic-example">
+            <h3>❌ Wrong: Using &lt;em&gt; for visual styling</h3>
+            <p>This is <em>visually italic</em> but has no semantic meaning</p>
+            
+            <h3>✅ Correct: Using &lt;em&gt; for emphasis</h3>
+            <p>I <em>never</em> said he stole your money</p>
+            <p>I never said <em>he</em> stole your money</p>
+            <p>I never said he stole <em>your</em> money</p>
+            
+            <h3>✅ Correct: Using CSS for visual styling</h3>
+            <p class="visual-italic">This text is italic for design purposes</p>
+        </div>
+        
+        <div class="code">font-style: italic; /* Use for visual design */
+font-style: normal; /* Default */
+font-style: oblique; /* Slanted version of normal font */</div>
+    </div>
+    
+    <!-- Letter Spacing -->
+    <div class="example-section">
+        <h2>2. letter-spacing: Character Spacing Control</h2>
+        
+        <div class="demo">
+            <p class="normal-spacing">Normal letter spacing (default)</p>
+            <p class="tight-spacing">Tight letter spacing (-0.02em) - use carefully!</p>
+            <p class="wide-spacing">Wide spacing for headers (0.2em)</p>
+            <p class="super-wide-spacing">D R A M A T I C   E F F E C T</p>
+        </div>
+        
+        <div class="code">letter-spacing: normal;    /* Default */
+letter-spacing: 0.1em;     /* Wider spacing */
+letter-spacing: -0.02em;   /* Tighter spacing */
+letter-spacing: 0.5em;     /* Very wide for effect */</div>
+        
+        <p><strong>Use cases:</strong></p>
+        <ul>
+            <li>Headers and titles (slightly wider)</li>
+            <li>All-caps text (needs more spacing)</li>
+            <li>Logo text</li>
+            <li>Artistic effects</li>
+        </ul>
+    </div>
+    
+    <!-- Line Height -->
+    <div class="example-section">
+        <h2>3. line-height: Line Spacing for Readability</h2>
+        
+        <div class="demo">
+            <h3>Tight Line Height (1.0)</h3>
+            <p class="tight-lines">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Notice how cramped this looks.</p>
+            
+            <h3>Normal Line Height (1.5) - Recommended</h3>
+            <p class="normal-lines">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. This is much more readable.</p>
+            
+            <h3>Loose Line Height (2.2)</h3>
+            <p class="loose-lines">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. This can be good for certain artistic effects.</p>
+        </div>
+        
+        <div class="code">line-height: 1.0;     /* Very tight */
+line-height: 1.5;     /* Good for body text */
+line-height: 2.0;     /* Loose, good for poetry */
+line-height: 120%;    /* Same as 1.2 */</div>
+    </div>
+    
+    <!-- Text Transform -->
+    <div class="example-section">
+        <h2>4. text-transform: Case Conversion</h2>
+        
+        <div class="demo">
+            <p class="uppercase">this text becomes UPPERCASE</p>
+            <p class="lowercase">THIS TEXT BECOMES lowercase</p>
+            <p class="capitalize">this text capitalizes Each Word</p>
+            <p>Normal case remains unchanged</p>
+        </div>
+        
+        <div class="code">text-transform: uppercase;   /* ALL CAPS */
+text-transform: lowercase;   /* all lowercase */
+text-transform: capitalize;  /* Title Case */
+text-transform: none;        /* No change */</div>
+        
+        <p><strong>Common uses:</strong></p>
+        <ul>
+            <li>Navigation menus (uppercase)</li>
+            <li>Buttons (uppercase)</li>
+            <li>Headings (capitalize)</li>
+            <li>Form labels</li>
+        </ul>
+    </div>
+    
+    <!-- Text Shadow -->
+    <div class="example-section">
+        <h2>5. text-shadow: Adding Depth and Style</h2>
+        
+        <div class="demo">
+            <h3 class="simple-shadow">Simple Shadow Effect</h3>
+            <h3 class="multiple-shadows">Multiple Colored Shadows</h3>
+            <h3 class="glow-text">Glowing Text Effect</h3>
+        </div>
+        
+        <div class="code">/* Simple shadow: offset-x offset-y blur-radius color */
+text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+
+/* Multiple shadows */
+text-shadow: 
+    1px 1px 2px rgba(255,0,0,0.3),
+    2px 2px 4px rgba(0,255,0,0.3),
+    3px 3px 6px rgba(0,0,255,0.3);
+
+/* Glow effect */
+text-shadow: 
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 15px #00ff00,
+    0 0 20px #00ff00;</div>
+        
+        <p><strong>⚠️ Use sparingly!</strong> Text shadows can reduce readability if overused.</p>
+    </div>
+    
+    <!-- Ellipsis -->
+    <div class="example-section">
+        <h2>6. Text Overflow with Ellipsis</h2>
+        
+        <h3>Single Line Ellipsis</h3>
+        <div class="ellipsis-container">
+            <p class="ellipsis-text">This is a very long text that will be truncated with an ellipsis when it overflows the container</p>
+        </div>
+        
+        <div class="code">/* The three properties needed for ellipsis */
+.ellipsis-text {
+    white-space: nowrap;        /* Prevent line breaks */
+    overflow: hidden;           /* Hide overflowing content */
+    text-overflow: ellipsis;    /* Add the ... */
+}</div>
+        
+        <h3>Multi-line Ellipsis (Webkit only)</h3>
+        <div class="ellipsis-container">
+            <p class="ellipsis-multiline">This is a longer text that demonstrates multi-line ellipsis. It will show the first few lines and then add ellipsis when the content overflows beyond the specified number of lines. This only works in Webkit browsers.</p>
+        </div>
+        
+        <div class="code">/* Multi-line ellipsis (Webkit only) */
+.ellipsis-multiline {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}</div>
+    </div>
+    
+    <!-- Interactive Example -->
+    <div class="example-section">
+        <h2>7. Interactive Example</h2>
+        
+        <div class="hover-demo">
+            <strong>Hover over this text!</strong><br>
+            Watch the letter-spacing, background, and text-shadow change smoothly.
+        </div>
+        
+        <div class="code">/* CSS Transitions with text properties */
+.hover-demo {
+    transition: all 0.3s ease;
+}
+
+.hover-demo:hover {
+    letter-spacing: 0.1em;
+    background: #bbdefb;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}</div>
+    </div>
+    
+    <div class="example-section">
+        <h2>💡 Pro Tips</h2>
+        <ul>
+            <li><strong>Readability first:</strong> Don't sacrifice readability for style</li>
+            <li><strong>Test on devices:</strong> Text effects may look different on various screens</li>
+            <li><strong>Use relative units:</strong> Em and rem units scale better than pixels</li>
+            <li><strong>Consider accessibility:</strong> Ensure sufficient contrast with text shadows</li>
+            <li><strong>Performance:</strong> Complex text shadows can impact performance on older devices</li>
+        </ul>
+    </div>
+</body>
+</html>

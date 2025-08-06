@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Implementation Methods</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .example {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #f9f9f9;
+        }
+        
+        /* 1. System Font Stack */
+        .system-font {
+            font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+        
+        /* 2. Google Fonts - imported via @import */
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+        
+        .google-font {
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        /* 3. Self-hosted font example */
+        @font-face {
+            font-family: 'LocalFont';
+            src: url('./fonts/local-font.woff2') format('woff2'),
+                 url('./fonts/local-font.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap; /* Important for performance */
+        }
+        
+        .local-font {
+            font-family: 'LocalFont', system-ui, sans-serif; /* Always include fallbacks! */
+        }
+        
+        code {
+            background: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .code-block {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>Font Implementation Methods</h1>
+    
+    <div class="example">
+        <h2>1. System Font Stack</h2>
+        <p class="system-font">This text uses the system font stack. It will look native on each operating system - San Francisco on macOS, Segoe UI on Windows, and Ubuntu on Linux.</p>
+        
+        <div class="code-block">/* CSS */
+.system-font {
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}</div>
+        
+        <h3>Why use system fonts?</h3>
+        <ul>
+            <li>✅ <strong>Performance:</strong> No download time - fonts are already installed</li>
+            <li>✅ <strong>Consistency:</strong> Matches the user's OS interface</li>
+            <li>✅ <strong>Reliability:</strong> Always available</li>
+            <li>✅ <strong>Privacy:</strong> No external requests</li>
+        </ul>
+    </div>
+    
+    <div class="example">
+        <h2>2. Google Fonts (Online Library)</h2>
+        <p class="google-font">This text uses Open Sans from Google Fonts. It's clean, readable, and widely used.</p>
+        
+        <h3>Method 1: Link in HTML head</h3>
+        <div class="code-block"><!-- HTML head -->
+&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet"&gt;</div>
+        
+        <h3>Method 2: @import in CSS</h3>
+        <div class="code-block">/* CSS */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');</div>
+        
+        <h3>Then use in CSS:</h3>
+        <div class="code-block">.google-font {
+    font-family: 'Open Sans', sans-serif; /* Always include fallback! */
+}</div>
+        
+        <h3>Considerations:</h3>
+        <ul>
+            <li>⚠️ <strong>Performance:</strong> Requires download time</li>
+            <li>⚠️ <strong>Privacy:</strong> GDPR concerns with Google Fonts</li>
+            <li>✅ <strong>Design:</strong> Wide variety of professional fonts</li>
+            <li>✅ <strong>Consistency:</strong> Same font across all devices</li>
+        </ul>
+    </div>
+    
+    <div class="example">
+        <h2>3. Self-Hosted Fonts</h2>
+        <p class="local-font">This text would use a self-hosted font (falls back to system font since we don't have the actual font file).</p>
+        
+        <div class="code-block">/* CSS */
+@font-face {
+    font-family: 'LocalFont';
+    src: url('./fonts/local-font.woff2') format('woff2'),
+         url('./fonts/local-font.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* Shows fallback while loading */
+}
+
+.local-font {
+    font-family: 'LocalFont', system-ui, sans-serif;
+}</div>
+        
+        <h3>Font formats (in order of preference):</h3>
+        <ul>
+            <li><strong>WOFF2:</strong> Best compression, modern browsers</li>
+            <li><strong>WOFF:</strong> Good compression, wider support</li>
+            <li><strong>TTF/OTF:</strong> Fallback for older browsers</li>
+        </ul>
+        
+        <h3>Benefits:</h3>
+        <ul>
+            <li>✅ <strong>Control:</strong> You own the font files</li>
+            <li>✅ <strong>Privacy:</strong> No external requests</li>
+            <li>✅ <strong>Performance:</strong> Can optimize loading</li>
+            <li>⚠️ <strong>Setup:</strong> More complex implementation</li>
+        </ul>
+    </div>
+    
+    <div class="example">
+        <h2>Best Practices</h2>
+        <ul>
+            <li><strong>Always include fallbacks</strong> in your font-family stack</li>
+            <li><strong>Use preconnect</strong> for external font libraries</li>
+            <li><strong>Consider font-display: swap</strong> for better loading experience</li>
+            <li><strong>Limit font weights and styles</strong> to reduce load time</li>
+            <li><strong>Test on different devices</strong> to ensure fallbacks work well</li>
+        </ul>
+    </div>
+</body>
+</html>

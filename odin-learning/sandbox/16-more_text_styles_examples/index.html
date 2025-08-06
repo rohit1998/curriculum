@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Text Styles - Code Examples</title>
+    
+    <!-- Google Fonts - Online Font Library Example -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>More Text Styles Examples</h1>
+        <p>Comprehensive demonstration of advanced CSS text styling techniques</p>
+    </header>
+
+    <main>
+        <!-- Font Implementation Methods -->
+        <section class="font-methods">
+            <h2>Font Implementation Methods</h2>
+            
+            <div class="example-card">
+                <h3>1. System Font Stack</h3>
+                <p class="system-font">This text uses a system font stack for reliability and performance. It will use the default UI font of your operating system.</p>
+                <code>font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;</code>
+            </div>
+
+            <div class="example-card">
+                <h3>2. Google Fonts (Online Library)</h3>
+                <p class="google-font-roboto">This text uses Roboto from Google Fonts - clean and modern.</p>
+                <p class="google-font-playfair">This text uses Playfair Display - elegant serif for headings.</p>
+                <code>Imported via &lt;link&gt; tag in HTML head</code>
+            </div>
+
+            <div class="example-card">
+                <h3>3. Self-Hosted Font</h3>
+                <p class="custom-font">This would use a self-hosted font if we had font files. Fallback to system fonts is shown.</p>
+                <code>@font-face rule defines custom font family</code>
+            </div>
+        </section>
+
+        <!-- Advanced Text Properties -->
+        <section class="text-properties">
+            <h2>Advanced Text Properties</h2>
+
+            <div class="example-card">
+                <h3>font-style: Semantic vs Visual</h3>
+                <p>Semantic emphasis: I <em>never</em> said he stole your money (using &lt;em&gt; tag)</p>
+                <p class="visual-italic">Visual styling: This is italic for design purposes (using CSS font-style)</p>
+                <p><strong>Rule:</strong> Use &lt;em&gt; for emphasis, CSS for visual styling</p>
+            </div>
+
+            <div class="example-card">
+                <h3>letter-spacing</h3>
+                <p class="normal-spacing">Normal letter spacing</p>
+                <p class="wide-spacing">Wide letter spacing for headers</p>
+                <p class="tight-spacing">Tight letter spacing (use sparingly)</p>
+            </div>
+
+            <div class="example-card">
+                <h3>line-height</h3>
+                <p class="tight-line-height">This paragraph has tight line height (1.2). Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Notice how the lines are close together.</p>
+                
+                <p class="normal-line-height">This paragraph has normal line height (1.5). Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. This is generally good for readability.</p>
+                
+                <p class="loose-line-height">This paragraph has loose line height (2.0). Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. More space between lines can be useful for certain designs.</p>
+            </div>
+
+            <div class="example-card">
+                <h3>text-transform</h3>
+                <p class="uppercase">this text becomes uppercase</p>
+                <p class="lowercase">THIS TEXT BECOMES LOWERCASE</p>
+                <p class="capitalize">this text capitalizes each word</p>
+                <p class="normal-case">This Text Keeps Normal Case</p>
+            </div>
+
+            <div class="example-card">
+                <h3>text-shadow</h3>
+                <h2 class="simple-shadow">Simple Shadow Effect</h2>
+                <h2 class="multiple-shadow">Multiple Shadow Effect</h2>
+                <h2 class="glow-effect">Glow Effect</h2>
+                <p><strong>Note:</strong> Use text-shadow sparingly for best effect</p>
+            </div>
+
+            <div class="example-card">
+                <h3>Text Overflow with Ellipsis</h3>
+                <div class="ellipsis-container">
+                    <p class="ellipsis-text">This is a very long text that will be truncated with an ellipsis when it overflows the container width</p>
+                </div>
+                <p><strong>CSS:</strong> white-space: nowrap; overflow: hidden; text-overflow: ellipsis;</p>
+            </div>
+        </section>
+
+        <!-- Performance Considerations -->
+        <section class="performance">
+            <h2>Performance & Best Practices</h2>
+            
+            <div class="example-card">
+                <h3>Font Loading Strategies</h3>
+                <ul>
+                    <li><strong>System fonts:</strong> Instant loading, consistent across platforms</li>
+                    <li><strong>Preconnect:</strong> Used in this page for faster Google Fonts loading</li>
+                    <li><strong>font-display: swap:</strong> Shows fallback font while custom font loads</li>
+                    <li><strong>Fallback fonts:</strong> Always specify fallbacks in font-family</li>
+                </ul>
+            </div>
+
+            <div class="example-card">
+                <h3>GDPR Considerations</h3>
+                <p>Google Fonts can be GDPR problematic. Alternatives:</p>
+                <ul>
+                    <li>Self-host Google Fonts</li>
+                    <li>Use Bunny Fonts (GDPR compliant)</li>
+                    <li>Use system font stacks</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Interactive Examples -->
+        <section class="interactive">
+            <h2>Interactive Examples</h2>
+            
+            <div class="example-card">
+                <h3>Hover Effects with Text Properties</h3>
+                <button class="hover-text">Hover over me!</button>
+                <p class="hover-paragraph">Hover over this paragraph to see letter-spacing change</p>
+            </div>
+
+            <div class="example-card">
+                <h3>Responsive Typography</h3>
+                <h2 class="responsive-text">This text scales with viewport size</h2>
+                <p>Resize your browser window to see the effect</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Examples created for The Odin Project - More Text Styles lesson</p>
+    </footer>
+</body>
+</html>

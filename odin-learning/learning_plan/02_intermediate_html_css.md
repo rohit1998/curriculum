@@ -19,11 +19,11 @@
 ### 02 [🔄] [Intermediate CSS Concepts](https://www.theodinproject.com/paths/full-stack-javascript/courses/intermediate-html-and-css#intermediate-css-concepts)
 01. [✅] [Default Styles](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-default-styles) - Completed on July 31, 2025
 02. [✅] [CSS Units](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-css-units) - Completed on July 31, 2025
-03. [ ] [More Text Styles](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-more-text-styles)
-04. [ ] [More CSS Properties](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-more-css-properties)
-05. [ ] [Advanced Selectors](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-advanced-selectors)
-06. [ ] [Positioning](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-positioning)
-07. [ ] [CSS Functions](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-css-functions)
+03. [✅] [More Text Styles](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-more-text-styles) - Completed on August 1, 2025
+04. [✅] [More CSS Properties](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-more-css-properties) - Completed on August 1, 2025
+05. [✅] [Advanced Selectors](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-advanced-selectors) - Completed on August 4, 2025
+06. [✅] [Positioning](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-positioning) - Completed on August 5, 2025
+07. [✅] [CSS Functions](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-css-functions) - Completed on August 5, 2025
 08. [ ] [Custom Properties](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-custom-properties)
 09. [ ] [Browser Compatibility](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-browser-compatibility)
 10. [ ] [Frameworks and Preprocessors](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-frameworks-and-preprocessors)
