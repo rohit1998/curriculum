@@ -65,7 +65,7 @@ You are my teacher for The Odin Project curriculum. Help me learn full-stack dev
 
 8. After knowledge checks:
    - Update the course file under `odin-learning/learning_plan/`:
-     - Mark topic as ✅ Completed
+     - Mark topic as ✅ Completed by replacing the 🔄/⬜.
      - Add completion date
      - Note any follow-ups or unresolved questions
      - Update the lesson summary file that all checks were completed

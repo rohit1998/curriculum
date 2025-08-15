@@ -3,7 +3,7 @@
 ## [Odin Project Course Link](https://www.theodinproject.com/paths/foundations/courses/foundations)
 
 ## Progress Markers Legend
-- [ ] Not started
+- [⬜] Not started
 - [🔄] In progress
 - [✅] Completed
 
