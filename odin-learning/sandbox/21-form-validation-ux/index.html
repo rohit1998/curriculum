@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation UX Best Practices</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Form Validation UX Best Practices</h1>
+        
+        <!-- Example 1: Basic Validation States -->
+        <section class="form-section">
+            <h2>1. Basic Validation States with CSS Classes</h2>
+            <form class="validation-form">
+                <div class="field-group">
+                    <label for="email1" class="field-label">
+                        Email Address <span class="required-indicator">*</span>
+                    </label>
+                    <input 
+                        type="email" 
+                        id="email1" 
+                        name="email1" 
+                        class="field-input"
+                        required
+                        placeholder="user@example.com"
+                    >
+                    <div class="field-error" aria-live="polite">
+                        Please enter a valid email address
+                    </div>
+                    <div class="field-success">
+                        ✓ Email looks good!
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <label for="password1" class="field-label">
+                        Password <span class="required-indicator">*</span>
+                    </label>
+                    <input 
+                        type="password" 
+                        id="password1" 
+                        name="password1" 
+                        class="field-input"
+                        required
+                        minlength="8"
+                        placeholder="At least 8 characters"
+                    >
+                    <div class="field-error" aria-live="polite">
+                        Password must be at least 8 characters long
+                    </div>
+                    <div class="field-success">
+                        ✓ Password meets requirements
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </section>
+
+        <!-- Example 2: Progressive Enhancement -->
+        <section class="form-section">
+            <h2>2. Progressive Validation with Better UX</h2>
+            <form class="progressive-form">
+                <div class="field-group">
+                    <label for="username" class="field-label">
+                        Username <span class="required-indicator">*</span>
+                    </label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        name="username" 
+                        class="field-input"
+                        required
+                        minlength="3"
+                        maxlength="20"
+                        pattern="[a-zA-Z0-9_]+"
+                        placeholder="alphanumeric_underscore only"
+                    >
+                    <div class="field-help">
+                        3-20 characters, letters, numbers, and underscores only
+                    </div>
+                    <div class="field-error" aria-live="polite"></div>
+                    <div class="field-success" aria-live="polite"></div>
+                </div>
+
+                <div class="field-group">
+                    <label for="phone" class="field-label">
+                        Phone Number
+                    </label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone" 
+                        class="field-input"
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                        placeholder="123-456-7890"
+                    >
+                    <div class="field-help">
+                        Format: 123-456-7890
+                    </div>
+                    <div class="field-error" aria-live="polite"></div>
+                </div>
+
+                <div class="field-group">
+                    <label for="age" class="field-label">
+                        Age <span class="required-indicator">*</span>
+                    </label>
+                    <input 
+                        type="number" 
+                        id="age" 
+                        name="age" 
+                        class="field-input"
+                        required
+                        min="13"
+                        max="120"
+                        placeholder="Must be 13 or older"
+                    >
+                    <div class="field-error" aria-live="polite"></div>
+                </div>
+
+                <button type="submit" class="submit-btn">Create Account</button>
+            </form>
+        </section>
+
+        <!-- Example 3: Custom Validation Messages -->
+        <section class="form-section">
+            <h2>3. Custom Validation with JavaScript Enhancement</h2>
+            <form class="custom-validation-form" novalidate>
+                <div class="field-group">
+                    <label for="confirm-password" class="field-label">
+                        Confirm Password <span class="required-indicator">*</span>
+                    </label>
+                    <input 
+                        type="password" 
+                        id="confirm-password" 
+                        name="confirm-password" 
+                        class="field-input"
+                        required
+                        placeholder="Repeat your password"
+                    >
+                    <div class="field-error" aria-live="polite"></div>
+                </div>
+
+                <div class="field-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="terms" name="terms" required class="checkbox-input">
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-text">
+                            I agree to the <a href="#" class="link">Terms of Service</a> 
+                            <span class="required-indicator">*</span>
+                        </span>
+                    </label>
+                    <div class="field-error" aria-live="polite"></div>
+                </div>
+
+                <button type="submit" class="submit-btn">Complete Registration</button>
+            </form>
+        </section>
+
+        <!-- Example 4: Form Summary Errors -->
+        <section class="form-section">
+            <h2>4. Form Error Summary (Accessibility Best Practice)</h2>
+            
+            <div class="error-summary" role="alert" aria-labelledby="error-summary-title" style="display: none;">
+                <h3 id="error-summary-title" class="error-summary-title">
+                    Please fix the following errors:
+                </h3>
+                <ul class="error-summary-list"></ul>
+            </div>
+
+            <form class="summary-form">
+                <div class="field-group">
+                    <label for="full-name" class="field-label">
+                        Full Name <span class="required-indicator">*</span>
+                    </label>
+                    <input 
+                        type="text" 
+                        id="full-name" 
+                        name="full-name" 
+                        class="field-input"
+                        required
+                        minlength="2"
+                    >
+                    <div class="field-error" aria-live="polite"></div>
+                </div>
+
+                <div class="field-group">
+                    <label for="email-summary" class="field-label">
+                        Email <span class="required-indicator">*</span>
+                    </label>
+                    <input 
+                        type="email" 
+                        id="email-summary" 
+                        name="email-summary" 
+                        class="field-input"
+                        required
+                    >
+                    <div class="field-error" aria-live="polite"></div>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Form</button>
+            </form>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

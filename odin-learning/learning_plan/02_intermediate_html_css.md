@@ -28,10 +28,10 @@
 09. [✅] [Browser Compatibility](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-browser-compatibility) - Completed on August 6, 2025
 10. [✅] [Frameworks and Preprocessors](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-frameworks-and-preprocessors) - Completed on October 6, 2023
 
-### 03 [🔄] [Forms](https://www.theodinproject.com/paths/full-stack-javascript/courses/intermediate-html-and-css#forms)
+### 03 [✅] [Forms](https://www.theodinproject.com/paths/full-stack-javascript/courses/intermediate-html-and-css#forms) - Completed on September 4, 2025
 01. [✅] [Form Basics](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-form-basics) - Completed on August 15, 2025
-02. [⬜] [Form Validation](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-form-validation)
-03. [⬜] [Project: Sign-up Form](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form)
+02. [✅] [Form Validation](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-form-validation) - Completed on August 31, 2025
+03. [✅] [Project: Sign-up Form](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form) - Completed on September 4, 2025
 
 ### 04 [⬜] [Grid](https://www.theodinproject.com/paths/full-stack-javascript/courses/intermediate-html-and-css#grid)
 01. [⬜] [Introduction to Grid](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-introduction-to-grid)
