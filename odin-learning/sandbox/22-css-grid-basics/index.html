@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Step-by-Step CSS Grid Demo</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    pre.code-block { background: #222; color: #eee; padding: 1rem; border-radius: 8px; overflow-x: auto; font-size: 1em; }
+    .demo-section { margin-bottom: 2.5rem; background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+    h2 { margin-top: 0; }
+  </style>
+</head>
+    <!-- Step 7: grid-row & grid-column demo -->
+    <section class="demo-section">
+      <h2>Step 7: <code>grid-row</code> & <code>grid-column</code></h2>
+      <div class="grid-demo step7">
+        <div class="item-a">A</div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+      </div>
+      <p><strong>Explanation:</strong> <code>grid-row</code> and <code>grid-column</code> let you position and size grid items by specifying which grid lines they start and end at. Here, item "A" spans two rows and two columns.</p>
+      <pre class="code-block"><code>/* CSS */
+<body>
+  <h1>Step-by-Step CSS Grid Demo</h1>
+
+  <!-- Step 1: Basic Grid Container -->
+  <section class="demo-section">
+    <h2>Step 1: Basic Grid Container</h2>
+    <div class="grid-demo step1">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+    </div>
+    <p><strong>Explanation:</strong> <code>display: grid;</code> turns the parent into a grid container. All direct children become grid items.</p>
+    </section>
+    <pre class="code-block"><code>/* CSS */
+.step1 {
+  display: grid;
+}
+</code></pre>
+  </section>
+
+  <!-- Step 2: Defining Columns and Rows -->
+  <section class="demo-section">
+    <h2>Step 2: Defining Columns and Rows</h2>
+    <div class="grid-demo step2">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+    </div>
+    <p><strong>Explanation:</strong> <code>grid-template-columns</code> and <code>grid-template-rows</code> define the number and size of columns and rows.</p>
+    <pre class="code-block"><code>/* CSS */
+.step2 {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  grid-template-rows: 50px 50px;
+}
+</code></pre>
+  </section>
+
+  <!-- Step 3: Gap Between Grid Cells -->
+  <section class="demo-section">
+    <h2>Step 3: Grid Gap (Gutter)</h2>
+    <div class="grid-demo step3">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+    </div>
+    <p><strong>Explanation:</strong> <code>gap</code> sets the space between grid cells (both rows and columns).</p>
+    <pre class="code-block"><code>/* CSS */
+.step3 {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  grid-template-rows: 50px 50px;
+  gap: 20px;
+}
+</code></pre>
+  </section>
+
+  <!-- Step 4: Implicit vs Explicit Grid -->
+  <section class="demo-section">
+    <h2>Step 4: Implicit vs Explicit Grid</h2>
+    <div class="grid-demo step4">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+    <p><strong>Explanation:</strong> The 5th item creates an implicit row. <code>grid-auto-rows</code> controls its size.</p>
+    <pre class="code-block"><code>/* CSS */
+.step4 {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  grid-template-rows: 50px 50px;
+  grid-auto-rows: 40px;
+}
+</code></pre>
+  </section>
+
+  <!-- Step 5: Fractional Units (fr) -->
+  <section class="demo-section">
+    <h2>Step 5: Fractional Units (<code>fr</code>)</h2>
+    <div class="grid-demo step5">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+    </div>
+    <p><strong>Explanation:</strong> <code>fr</code> units divide available space among columns/rows.</p>
+    <pre class="code-block"><code>/* CSS */
+.step5 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 60px 60px;
+}
+</code></pre>
+  </section>
+
+  <!-- Step 6: Named Grid Areas (optional, advanced) -->
+  <section class="demo-section">
+    <h2>Step 6: Named Grid Areas</h2>
+    <div class="grid-demo step6">
+      <div class="header">Header</div>
+      <div class="sidebar">Sidebar</div>
+      <div class="main">Main</div>
+      <div class="footer">Footer</div>
+    </div>
+    <p><strong>Explanation:</strong> <code>grid-template-areas</code> lets you name and visually lay out areas.</p>
+    <pre class="code-block"><code>/* CSS */
+.step6 {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  grid-template-rows: 40px 80px 40px;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+}
+.step6 .header { grid-area: header; }
+.step6 .sidebar { grid-area: sidebar; }
+.step6 .main { grid-area: main; }
+.step6 .footer { grid-area: footer; }
+</code></pre>
+  </section>
+
+</body>
+</html>

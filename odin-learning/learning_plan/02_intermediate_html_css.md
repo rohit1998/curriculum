@@ -33,10 +33,12 @@
 02. [✅] [Form Validation](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-form-validation) - Completed on August 31, 2025
 03. [✅] [Project: Sign-up Form](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form) - Completed on September 4, 2025
 
-### 04 [⬜] [Grid](https://www.theodinproject.com/paths/full-stack-javascript/courses/intermediate-html-and-css#grid)
-01. [⬜] [Introduction to Grid](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-introduction-to-grid)
-02. [⬜] [Creating a Grid](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-creating-a-grid)
-03. [⬜] [Positioning Grid Elements](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-positioning-grid-elements)
-04. [⬜] [Advanced Grid Properties](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-advanced-grid-properties)
+### 04 [🔄] [Grid](https://www.theodinproject.com/paths/full-stack-javascript/courses/intermediate-html-and-css#grid)
+01. [✅] [Introduction to Grid](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-introduction-to-grid) - Completed on September 16, 2025
+02. [✅] [Creating a Grid](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-creating-a-grid) - Completed on September 16, 2025
+03. [] [Positioning Grid Elements](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-positioning-grid-elements)
+03. [✅] [Positioning Grid Elements](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-positioning-grid-elements) - Completed on September 17, 2025
+04. [✅] [Advanced Grid Properties](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-advanced-grid-properties) - Completed on September 17, 2025
 05. [⬜] [Using Flexbox and Grid](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-using-flexbox-and-grid)
+05. [✅] [Using Flexbox and Grid](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-using-flexbox-and-grid) - Completed on September 18, 2025
 06. [⬜] [Project: Admin Dashboard](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-admin-dashboard)
